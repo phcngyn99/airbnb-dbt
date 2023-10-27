@@ -1,0 +1,108 @@
+[0m21:53:27.169652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1039995d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106779e40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106779690>]}
+
+
+============================== 21:53:27.172222 | 8ae4280e-b92b-4721-96e3-a38ca77dd81d ==============================
+[0m21:53:27.172222 [info ] [MainThread]: Running with dbt=1.6.5
+[0m21:53:27.172562 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': '/Users/phuccnguyen99/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt init', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:53:38.890702 [debug] [MainThread]: Starter project path: /Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/include/starter_project
+[0m21:53:38.901907 [info ] [MainThread]: 
+Your new dbt project "airbnb" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m21:53:38.902699 [info ] [MainThread]: Setting up your profile.
+[0m21:54:58.849231 [error] [MainThread]: Encountered an error:
+list index out of range
+[0m21:54:58.854674 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/cli/requires.py", line 87, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/cli/requires.py", line 72, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/cli/main.py", line 469, in init
+    results = task.run()
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/task/init.py", line 307, in run
+    adapter = self.ask_for_adapter_choice()
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/task/init.py", line 234, in ask_for_adapter_choice
+    return available_adapters[numeric_choice - 1]
+IndexError: list index out of range
+
+[0m21:54:58.856680 [debug] [MainThread]: Command `dbt init` failed at 21:54:58.856356 after 91.70 seconds
+[0m21:54:58.857564 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1039995d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10677a3b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106779570>]}
+[0m21:54:58.858382 [debug] [MainThread]: Flushing usage events
+[0m21:56:35.303836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075f94e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109845e40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109845690>]}
+
+
+============================== 21:56:35.306526 | e7fc9a63-dbee-4986-b2cd-a83b535d0109 ==============================
+[0m21:56:35.306526 [info ] [MainThread]: Running with dbt=1.6.5
+[0m21:56:35.306852 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'profiles_dir': '/Users/phuccnguyen99/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt init airbnb', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:56:35.307422 [debug] [MainThread]: Starter project path: /Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/include/starter_project
+[0m21:56:35.311537 [info ] [MainThread]: 
+Your new dbt project "airbnb" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m21:56:35.311782 [info ] [MainThread]: Setting up your profile.
+[0m22:02:04.562728 [info ] [MainThread]: Profile airbnb written to /Users/phuccnguyen99/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m22:02:04.564254 [debug] [MainThread]: Command `dbt init` succeeded at 22:02:04.564005 after 329.28 seconds
+[0m22:02:04.564680 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075f94e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109846260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109845e40>]}
+[0m22:02:04.565115 [debug] [MainThread]: Flushing usage events
+[0m22:02:13.048889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1038b5540>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b01e70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b016c0>]}
+
+
+============================== 22:02:13.051376 | 0a8aa484-e365-4b24-a48d-464415231ba3 ==============================
+[0m22:02:13.051376 [info ] [MainThread]: Running with dbt=1.6.5
+[0m22:02:13.051695 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/phuccnguyen99/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:02:13.052038 [info ] [MainThread]: dbt version: 1.6.5
+[0m22:02:13.052204 [info ] [MainThread]: python version: 3.10.13
+[0m22:02:13.052359 [info ] [MainThread]: python path: /Users/phuccnguyen99/miniconda3/bin/python
+[0m22:02:13.052514 [info ] [MainThread]: os info: macOS-14.0-arm64-arm-64bit
+[0m22:02:14.096369 [info ] [MainThread]: Using profiles dir at /Users/phuccnguyen99/.dbt
+[0m22:02:14.096706 [info ] [MainThread]: Using profiles.yml file at /Users/phuccnguyen99/.dbt/profiles.yml
+[0m22:02:14.096889 [info ] [MainThread]: Using dbt_project.yml file at /Users/phuccnguyen99/Project/Learn/airbnb-dbt/dbt_project.yml
+[0m22:02:14.097110 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m22:02:14.097414 [debug] [MainThread]: Command `dbt debug` failed at 22:02:14.097362 after 1.06 seconds
+[0m22:02:14.097625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1038b5540>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1044c8520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b02050>]}
+[0m22:02:14.097836 [debug] [MainThread]: Flushing usage events
+[0m22:04:23.031677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1031f14e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105439e40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105439690>]}
+
+
+============================== 22:04:23.034411 | 32c7b3a2-284a-4f4a-b3b6-33390315f794 ==============================
+[0m22:04:23.034411 [info ] [MainThread]: Running with dbt=1.6.5
+[0m22:04:23.034743 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': '/Users/phuccnguyen99/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m22:04:23.035078 [info ] [MainThread]: dbt version: 1.6.5
+[0m22:04:23.035245 [info ] [MainThread]: python version: 3.10.13
+[0m22:04:23.035403 [info ] [MainThread]: python path: /Users/phuccnguyen99/miniconda3/bin/python
+[0m22:04:23.035556 [info ] [MainThread]: os info: macOS-14.0-arm64-arm-64bit
+[0m22:04:24.146199 [info ] [MainThread]: Using profiles dir at /Users/phuccnguyen99/.dbt
+[0m22:04:24.146497 [info ] [MainThread]: Using profiles.yml file at /Users/phuccnguyen99/.dbt/profiles.yml
+[0m22:04:24.146676 [info ] [MainThread]: Using dbt_project.yml file at /Users/phuccnguyen99/Project/Learn/airbnb-dbt/dbt_project.yml
+[0m22:04:24.146891 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m22:04:24.147188 [debug] [MainThread]: Command `dbt debug` failed at 22:04:24.147137 after 1.13 seconds
+[0m22:04:24.147386 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1031f14e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103d05de0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10543a020>]}
+[0m22:04:24.147589 [debug] [MainThread]: Flushing usage events
