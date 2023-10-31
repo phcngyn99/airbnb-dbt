@@ -1554,3 +1554,374 @@ FROM
 [0m11:34:47.385833 [debug] [MainThread]: Command `dbt run` succeeded at 11:34:47.385736 after 20.72 seconds
 [0m11:34:47.386256 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1037d95d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x123b6f640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14400c0a0>]}
 [0m11:34:47.386691 [debug] [MainThread]: Flushing usage events
+[0m12:48:41.865620 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102a9a080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ce6050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ce56f0>]}
+
+
+============================== 12:48:41.868292 | 77cbd641-06a9-4783-9902-379da94fd791 ==============================
+[0m12:48:41.868292 [info ] [MainThread]: Running with dbt=1.6.5
+[0m12:48:41.868710 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:48:41.869020 [info ] [MainThread]: dbt version: 1.6.5
+[0m12:48:41.869188 [info ] [MainThread]: python version: 3.10.13
+[0m12:48:41.869349 [info ] [MainThread]: python path: /Users/phuccnguyen99/miniconda3/bin/python
+[0m12:48:41.869504 [info ] [MainThread]: os info: macOS-14.0-arm64-arm-64bit
+[0m12:48:42.437794 [info ] [MainThread]: Using profiles dir at /Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb
+[0m12:48:42.438113 [info ] [MainThread]: Using profiles.yml file at /Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb/profiles.yml
+[0m12:48:42.438295 [info ] [MainThread]: Using dbt_project.yml file at /Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb/dbt_project.yml
+[0m12:48:42.438604 [info ] [MainThread]: adapter type: snowflake
+[0m12:48:42.438828 [info ] [MainThread]: adapter version: 1.6.4
+[0m12:48:42.450624 [info ] [MainThread]: Configuration:
+[0m12:48:42.450917 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m12:48:42.451089 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m12:48:42.451249 [info ] [MainThread]: Required dependencies:
+[0m12:48:42.451452 [debug] [MainThread]: Executing "git --help"
+[0m12:48:42.460475 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m12:48:42.461142 [debug] [MainThread]: STDERR: "b''"
+[0m12:48:42.461366 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:48:42.461558 [info ] [MainThread]: Connection:
+[0m12:48:42.461775 [info ] [MainThread]:   account: mu14621.us-east-2.aws
+[0m12:48:42.461937 [info ] [MainThread]:   user: dbt
+[0m12:48:42.462089 [info ] [MainThread]:   database: AIRBNB
+[0m12:48:42.462236 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m12:48:42.462386 [info ] [MainThread]:   role: TRANSFORM
+[0m12:48:42.462533 [info ] [MainThread]:   schema: DEV
+[0m12:48:42.462682 [info ] [MainThread]:   authenticator: None
+[0m12:48:42.462829 [info ] [MainThread]:   private_key_path: None
+[0m12:48:42.462978 [info ] [MainThread]:   token: None
+[0m12:48:42.463124 [info ] [MainThread]:   oauth_client_id: None
+[0m12:48:42.463270 [info ] [MainThread]:   query_tag: None
+[0m12:48:42.463419 [info ] [MainThread]:   client_session_keep_alive: False
+[0m12:48:42.463564 [info ] [MainThread]:   host: None
+[0m12:48:42.463709 [info ] [MainThread]:   port: None
+[0m12:48:42.463855 [info ] [MainThread]:   proxy_host: None
+[0m12:48:42.464002 [info ] [MainThread]:   proxy_port: None
+[0m12:48:42.464153 [info ] [MainThread]:   protocol: None
+[0m12:48:42.464298 [info ] [MainThread]:   connect_retries: 1
+[0m12:48:42.464445 [info ] [MainThread]:   connect_timeout: None
+[0m12:48:42.464590 [info ] [MainThread]:   retry_on_database_errors: False
+[0m12:48:42.464740 [info ] [MainThread]:   retry_all: False
+[0m12:48:42.464887 [info ] [MainThread]:   insecure_mode: False
+[0m12:48:42.465033 [info ] [MainThread]:   reuse_connections: None
+[0m12:48:42.465459 [info ] [MainThread]: Registered adapter: snowflake=1.6.4
+[0m12:48:42.469592 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m12:48:42.470550 [debug] [MainThread]: Using snowflake connection "debug"
+[0m12:48:42.470729 [debug] [MainThread]: On debug: select 1 as id
+[0m12:48:42.470893 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:48:44.577354 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m12:48:44.581081 [debug] [MainThread]: On debug: Close
+[0m12:48:45.260672 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m12:48:45.262181 [info ] [MainThread]: [32mAll checks passed![0m
+[0m12:48:45.263793 [debug] [MainThread]: Command `dbt debug` succeeded at 12:48:45.263385 after 3.41 seconds
+[0m12:48:45.264898 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m12:48:45.265650 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102a9a080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1164cfa00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1257b2500>]}
+[0m12:48:45.266465 [debug] [MainThread]: Flushing usage events
+[0m12:49:37.527512 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1030b95d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105306140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105305fc0>]}
+
+
+============================== 12:49:37.530173 | 7c5a32d2-f9cf-44ca-99ef-00ceaa3a0231 ==============================
+[0m12:49:37.530173 [info ] [MainThread]: Running with dbt=1.6.5
+[0m12:49:37.530509 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run -s fct_reviews', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:49:38.047421 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7c5a32d2-f9cf-44ca-99ef-00ceaa3a0231', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105305ff0>]}
+[0m12:49:38.055752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7c5a32d2-f9cf-44ca-99ef-00ceaa3a0231', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ef20d60>]}
+[0m12:49:38.056252 [info ] [MainThread]: Registered adapter: snowflake=1.6.4
+[0m12:49:38.067430 [debug] [MainThread]: checksum: aab365d456d99653250b9db50d1a1ebb1796991a326d59c2eea7a74da9519161, vars: {}, profile: , target: , version: 1.6.5
+[0m12:49:38.094832 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:49:38.095192 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:49:38.099419 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7c5a32d2-f9cf-44ca-99ef-00ceaa3a0231', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12f63fdf0>]}
+[0m12:49:38.105122 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7c5a32d2-f9cf-44ca-99ef-00ceaa3a0231', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12f54fd30>]}
+[0m12:49:38.105424 [info ] [MainThread]: Found 6 models, 3 sources, 0 exposures, 0 metrics, 375 macros, 0 groups, 0 semantic models
+[0m12:49:38.105634 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7c5a32d2-f9cf-44ca-99ef-00ceaa3a0231', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12f54fc40>]}
+[0m12:49:38.106320 [info ] [MainThread]: 
+[0m12:49:38.106736 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m12:49:38.107283 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_AIRBNB'
+[0m12:49:38.114919 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB"
+[0m12:49:38.115211 [debug] [ThreadPool]: On list_AIRBNB: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB"} */
+show terse schemas in database AIRBNB
+    limit 10000
+[0m12:49:38.115385 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:49:40.265820 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.0 seconds
+[0m12:49:40.267850 [debug] [ThreadPool]: On list_AIRBNB: Close
+[0m12:49:40.959590 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_AIRBNB, now list_AIRBNB_DEV)
+[0m12:49:40.973333 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_DEV"
+[0m12:49:40.973885 [debug] [ThreadPool]: On list_AIRBNB_DEV: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB_DEV"} */
+show terse objects in AIRBNB.DEV limit 10000
+[0m12:49:40.974344 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:49:42.729944 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 2.0 seconds
+[0m12:49:42.735243 [debug] [ThreadPool]: On list_AIRBNB_DEV: Close
+[0m12:49:43.390503 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7c5a32d2-f9cf-44ca-99ef-00ceaa3a0231', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12f66eb00>]}
+[0m12:49:43.391977 [info ] [MainThread]: Concurrency: 7 threads (target='dev')
+[0m12:49:43.392553 [info ] [MainThread]: 
+[0m12:49:43.396795 [debug] [Thread-1 (]: Began running node model.airbnb.fct_reviews
+[0m12:49:43.397584 [info ] [Thread-1 (]: 1 of 1 START sql incremental model DEV.fct_reviews ............................. [RUN]
+[0m12:49:43.399117 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_AIRBNB_DEV, now model.airbnb.fct_reviews)
+[0m12:49:43.399725 [debug] [Thread-1 (]: Began compiling node model.airbnb.fct_reviews
+[0m12:49:43.414536 [debug] [Thread-1 (]: Writing injected SQL for node "model.airbnb.fct_reviews"
+[0m12:49:43.415658 [debug] [Thread-1 (]: Timing info for model.airbnb.fct_reviews (compile): 12:49:43.400099 => 12:49:43.415445
+[0m12:49:43.416102 [debug] [Thread-1 (]: Began executing node model.airbnb.fct_reviews
+[0m12:49:43.458941 [debug] [Thread-1 (]: Writing runtime sql for node "model.airbnb.fct_reviews"
+[0m12:49:43.460002 [debug] [Thread-1 (]: Using snowflake connection "model.airbnb.fct_reviews"
+[0m12:49:43.460267 [debug] [Thread-1 (]: On model.airbnb.fct_reviews: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "model.airbnb.fct_reviews"} */
+create or replace transient table AIRBNB.DEV.fct_reviews
+         as
+        (
+
+WITH src_reviews AS (
+    SELECT * FROM AIRBNB.DEV.src_listings
+)
+
+SELECT 
+    *
+FROM
+    src_reviews
+WHERE
+    review_text IS NOT NULL
+
+
+        );
+[0m12:49:43.460503 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:49:45.059013 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b0027d-0001-7671-0002-c9460001005a
+[0m12:49:45.059365 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 14 at position 4
+invalid identifier 'REVIEW_TEXT'
+[0m12:49:45.059702 [debug] [Thread-1 (]: Timing info for model.airbnb.fct_reviews (execute): 12:49:43.416392 => 12:49:45.059591
+[0m12:49:45.059922 [debug] [Thread-1 (]: On model.airbnb.fct_reviews: Close
+[0m12:49:45.667896 [debug] [Thread-1 (]: Database Error in model fct_reviews (models/fct/fct_reviews.sql)
+  000904 (42000): SQL compilation error: error line 14 at position 4
+  invalid identifier 'REVIEW_TEXT'
+  compiled Code at target/run/airbnb/models/fct/fct_reviews.sql
+[0m12:49:45.669231 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7c5a32d2-f9cf-44ca-99ef-00ceaa3a0231', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x142bf9510>]}
+[0m12:49:45.670454 [error] [Thread-1 (]: 1 of 1 ERROR creating sql incremental model DEV.fct_reviews .................... [[31mERROR[0m in 2.27s]
+[0m12:49:45.670814 [debug] [Thread-1 (]: Finished running node model.airbnb.fct_reviews
+[0m12:49:45.671816 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:49:45.671994 [debug] [MainThread]: Connection 'model.airbnb.fct_reviews' was properly closed.
+[0m12:49:45.672164 [info ] [MainThread]: 
+[0m12:49:45.672341 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 7.57 seconds (7.57s).
+[0m12:49:45.672681 [debug] [MainThread]: Command end result
+[0m12:49:45.677287 [info ] [MainThread]: 
+[0m12:49:45.677565 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m12:49:45.677805 [info ] [MainThread]: 
+[0m12:49:45.678002 [error] [MainThread]:   Database Error in model fct_reviews (models/fct/fct_reviews.sql)
+  000904 (42000): SQL compilation error: error line 14 at position 4
+  invalid identifier 'REVIEW_TEXT'
+  compiled Code at target/run/airbnb/models/fct/fct_reviews.sql
+[0m12:49:45.678187 [info ] [MainThread]: 
+[0m12:49:45.678365 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m12:49:45.678696 [debug] [MainThread]: Command `dbt run` failed at 12:49:45.678646 after 8.16 seconds
+[0m12:49:45.678921 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1030b95d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ef20d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x142bfb940>]}
+[0m12:49:45.679134 [debug] [MainThread]: Flushing usage events
+[0m12:50:19.152770 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10588d600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ada170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ad9ff0>]}
+
+
+============================== 12:50:19.155274 | 36f59b77-b891-4748-8236-e3f1332f0d87 ==============================
+[0m12:50:19.155274 [info ] [MainThread]: Running with dbt=1.6.5
+[0m12:50:19.155607 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb/logs', 'profiles_dir': '/Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run -s fct_reviews', 'send_anonymous_usage_stats': 'True'}
+[0m12:50:19.653102 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '36f59b77-b891-4748-8236-e3f1332f0d87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ada020>]}
+[0m12:50:19.663104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '36f59b77-b891-4748-8236-e3f1332f0d87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127424d60>]}
+[0m12:50:19.663986 [info ] [MainThread]: Registered adapter: snowflake=1.6.4
+[0m12:50:19.678871 [debug] [MainThread]: checksum: aab365d456d99653250b9db50d1a1ebb1796991a326d59c2eea7a74da9519161, vars: {}, profile: , target: , version: 1.6.5
+[0m12:50:19.693392 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:50:19.693784 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:50:19.698278 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '36f59b77-b891-4748-8236-e3f1332f0d87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127a37e20>]}
+[0m12:50:19.703508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '36f59b77-b891-4748-8236-e3f1332f0d87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12752bd60>]}
+[0m12:50:19.703808 [info ] [MainThread]: Found 6 models, 3 sources, 0 exposures, 0 metrics, 375 macros, 0 groups, 0 semantic models
+[0m12:50:19.704018 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '36f59b77-b891-4748-8236-e3f1332f0d87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12752bc70>]}
+[0m12:50:19.704737 [info ] [MainThread]: 
+[0m12:50:19.705140 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m12:50:19.705687 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_AIRBNB'
+[0m12:50:19.714163 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB"
+[0m12:50:19.714476 [debug] [ThreadPool]: On list_AIRBNB: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB"} */
+show terse schemas in database AIRBNB
+    limit 10000
+[0m12:50:19.714653 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:50:21.807552 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.0 seconds
+[0m12:50:21.811964 [debug] [ThreadPool]: On list_AIRBNB: Close
+[0m12:50:22.403075 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_AIRBNB, now list_AIRBNB_DEV)
+[0m12:50:22.424380 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_DEV"
+[0m12:50:22.425265 [debug] [ThreadPool]: On list_AIRBNB_DEV: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB_DEV"} */
+show terse objects in AIRBNB.DEV limit 10000
+[0m12:50:22.425775 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:50:24.167003 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 2.0 seconds
+[0m12:50:24.172848 [debug] [ThreadPool]: On list_AIRBNB_DEV: Close
+[0m12:50:24.940613 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '36f59b77-b891-4748-8236-e3f1332f0d87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127a70c10>]}
+[0m12:50:24.942927 [info ] [MainThread]: Concurrency: 7 threads (target='dev')
+[0m12:50:24.943975 [info ] [MainThread]: 
+[0m12:50:24.948316 [debug] [Thread-1 (]: Began running node model.airbnb.fct_reviews
+[0m12:50:24.949499 [info ] [Thread-1 (]: 1 of 1 START sql incremental model DEV.fct_reviews ............................. [RUN]
+[0m12:50:24.951583 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_AIRBNB_DEV, now model.airbnb.fct_reviews)
+[0m12:50:24.952343 [debug] [Thread-1 (]: Began compiling node model.airbnb.fct_reviews
+[0m12:50:24.963858 [debug] [Thread-1 (]: Writing injected SQL for node "model.airbnb.fct_reviews"
+[0m12:50:24.964615 [debug] [Thread-1 (]: Timing info for model.airbnb.fct_reviews (compile): 12:50:24.952821 => 12:50:24.964469
+[0m12:50:24.964859 [debug] [Thread-1 (]: Began executing node model.airbnb.fct_reviews
+[0m12:50:24.992754 [debug] [Thread-1 (]: Writing runtime sql for node "model.airbnb.fct_reviews"
+[0m12:50:24.993452 [debug] [Thread-1 (]: Using snowflake connection "model.airbnb.fct_reviews"
+[0m12:50:24.993687 [debug] [Thread-1 (]: On model.airbnb.fct_reviews: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "model.airbnb.fct_reviews"} */
+create or replace transient table AIRBNB.DEV.fct_reviews
+         as
+        (
+
+WITH src_reviews AS (
+    SELECT * FROM AIRBNB.DEV.src_reviews
+)
+
+SELECT 
+    *
+FROM
+    src_reviews
+WHERE
+    review_text IS NOT NULL
+
+
+        );
+[0m12:50:24.993899 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:50:31.435202 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 6.0 seconds
+[0m12:50:31.468394 [debug] [Thread-1 (]: Using snowflake connection "model.airbnb.fct_reviews"
+[0m12:50:31.469292 [debug] [Thread-1 (]: On model.airbnb.fct_reviews: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "model.airbnb.fct_reviews"} */
+drop view if exists AIRBNB.DEV.fct_reviews__dbt_tmp cascade
+[0m12:50:31.849893 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m12:50:31.892998 [debug] [Thread-1 (]: Timing info for model.airbnb.fct_reviews (execute): 12:50:24.965011 => 12:50:31.892739
+[0m12:50:31.893619 [debug] [Thread-1 (]: On model.airbnb.fct_reviews: Close
+[0m12:50:32.729914 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '36f59b77-b891-4748-8236-e3f1332f0d87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x130509390>]}
+[0m12:50:32.731370 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model DEV.fct_reviews ........................ [[32mSUCCESS 1[0m in 7.78s]
+[0m12:50:32.732321 [debug] [Thread-1 (]: Finished running node model.airbnb.fct_reviews
+[0m12:50:32.734724 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:50:32.735356 [debug] [MainThread]: Connection 'model.airbnb.fct_reviews' was properly closed.
+[0m12:50:32.735876 [info ] [MainThread]: 
+[0m12:50:32.736412 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 13.03 seconds (13.03s).
+[0m12:50:32.737570 [debug] [MainThread]: Command end result
+[0m12:50:32.752456 [info ] [MainThread]: 
+[0m12:50:32.753365 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:50:32.753891 [info ] [MainThread]: 
+[0m12:50:32.754398 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m12:50:32.755273 [debug] [MainThread]: Command `dbt run` succeeded at 12:50:32.755134 after 13.61 seconds
+[0m12:50:32.755877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10588d600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127a348e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1305e08e0>]}
+[0m12:50:32.756468 [debug] [MainThread]: Flushing usage events
+[0m13:00:31.265120 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1033b5600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105602170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105601ff0>]}
+
+
+============================== 13:00:31.267897 | 09799a9f-2521-441c-89aa-d387d2486434 ==============================
+[0m13:00:31.267897 [info ] [MainThread]: Running with dbt=1.6.5
+[0m13:00:31.268238 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb/logs', 'version_check': 'True', 'profiles_dir': '/Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run -s fct_reviews', 'send_anonymous_usage_stats': 'True'}
+[0m13:00:31.765603 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '09799a9f-2521-441c-89aa-d387d2486434', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105602020>]}
+[0m13:00:31.773973 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '09799a9f-2521-441c-89aa-d387d2486434', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11be94d60>]}
+[0m13:00:31.774413 [info ] [MainThread]: Registered adapter: snowflake=1.6.4
+[0m13:00:31.786269 [debug] [MainThread]: checksum: aab365d456d99653250b9db50d1a1ebb1796991a326d59c2eea7a74da9519161, vars: {}, profile: , target: , version: 1.6.5
+[0m13:00:31.812585 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:00:31.812875 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:00:31.816637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '09799a9f-2521-441c-89aa-d387d2486434', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c4afe20>]}
+[0m13:00:31.821913 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '09799a9f-2521-441c-89aa-d387d2486434', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bf9fd60>]}
+[0m13:00:31.822216 [info ] [MainThread]: Found 6 models, 3 sources, 0 exposures, 0 metrics, 375 macros, 0 groups, 0 semantic models
+[0m13:00:31.822426 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '09799a9f-2521-441c-89aa-d387d2486434', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bf9fc70>]}
+[0m13:00:31.823109 [info ] [MainThread]: 
+[0m13:00:31.823516 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:00:31.824118 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_AIRBNB'
+[0m13:00:31.831571 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB"
+[0m13:00:31.831874 [debug] [ThreadPool]: On list_AIRBNB: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB"} */
+show terse schemas in database AIRBNB
+    limit 10000
+[0m13:00:31.832054 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:00:34.277880 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.0 seconds
+[0m13:00:34.281628 [debug] [ThreadPool]: On list_AIRBNB: Close
+[0m13:00:34.996853 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_AIRBNB, now list_AIRBNB_DEV)
+[0m13:00:35.009924 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_DEV"
+[0m13:00:35.010459 [debug] [ThreadPool]: On list_AIRBNB_DEV: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB_DEV"} */
+show terse objects in AIRBNB.DEV limit 10000
+[0m13:00:35.010868 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:00:37.220193 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 2.0 seconds
+[0m13:00:37.224709 [debug] [ThreadPool]: On list_AIRBNB_DEV: Close
+[0m13:00:40.420586 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '09799a9f-2521-441c-89aa-d387d2486434', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c4e2ad0>]}
+[0m13:00:40.421393 [info ] [MainThread]: Concurrency: 7 threads (target='dev')
+[0m13:00:40.421612 [info ] [MainThread]: 
+[0m13:00:40.423153 [debug] [Thread-1 (]: Began running node model.airbnb.fct_reviews
+[0m13:00:40.423489 [info ] [Thread-1 (]: 1 of 1 START sql incremental model DEV.fct_reviews ............................. [RUN]
+[0m13:00:40.424158 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_AIRBNB_DEV, now model.airbnb.fct_reviews)
+[0m13:00:40.424439 [debug] [Thread-1 (]: Began compiling node model.airbnb.fct_reviews
+[0m13:00:40.432010 [debug] [Thread-1 (]: Writing injected SQL for node "model.airbnb.fct_reviews"
+[0m13:00:40.432593 [debug] [Thread-1 (]: Timing info for model.airbnb.fct_reviews (compile): 13:00:40.424604 => 13:00:40.432476
+[0m13:00:40.432805 [debug] [Thread-1 (]: Began executing node model.airbnb.fct_reviews
+[0m13:00:40.457152 [debug] [Thread-1 (]: Using snowflake connection "model.airbnb.fct_reviews"
+[0m13:00:40.457620 [debug] [Thread-1 (]: On model.airbnb.fct_reviews: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "model.airbnb.fct_reviews"} */
+create or replace  temporary view AIRBNB.DEV.fct_reviews__dbt_tmp
+  
+   as (
+    
+
+WITH src_reviews AS (
+    SELECT * FROM AIRBNB.DEV.src_reviews
+)
+
+SELECT 
+    *
+FROM
+    src_reviews
+WHERE
+    review_text IS NOT NULL
+
+
+  AND review_date > ( SELECT MAX(review_date) FROM AIRBNB.DEV.fct_reviews )
+
+  );
+[0m13:00:40.457899 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:00:48.002303 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 8.0 seconds
+[0m13:00:48.018817 [debug] [Thread-1 (]: Using snowflake connection "model.airbnb.fct_reviews"
+[0m13:00:48.019633 [debug] [Thread-1 (]: On model.airbnb.fct_reviews: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "model.airbnb.fct_reviews"} */
+describe table AIRBNB.DEV.fct_reviews__dbt_tmp
+[0m13:00:48.514149 [debug] [Thread-1 (]: SQL status: SUCCESS 5 in 0.0 seconds
+[0m13:00:48.523264 [debug] [Thread-1 (]: Using snowflake connection "model.airbnb.fct_reviews"
+[0m13:00:48.523994 [debug] [Thread-1 (]: On model.airbnb.fct_reviews: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "model.airbnb.fct_reviews"} */
+describe table AIRBNB.DEV.fct_reviews
+[0m13:00:48.883061 [debug] [Thread-1 (]: SQL status: SUCCESS 5 in 0.0 seconds
+[0m13:00:48.907257 [debug] [Thread-1 (]: Using snowflake connection "model.airbnb.fct_reviews"
+[0m13:00:48.907909 [debug] [Thread-1 (]: On model.airbnb.fct_reviews: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "model.airbnb.fct_reviews"} */
+describe table AIRBNB.DEV.fct_reviews__dbt_tmp
+[0m13:00:49.428385 [debug] [Thread-1 (]: SQL status: SUCCESS 5 in 1.0 seconds
+[0m13:00:49.435771 [debug] [Thread-1 (]: Using snowflake connection "model.airbnb.fct_reviews"
+[0m13:00:49.436398 [debug] [Thread-1 (]: On model.airbnb.fct_reviews: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "model.airbnb.fct_reviews"} */
+describe table "AIRBNB"."DEV"."FCT_REVIEWS"
+[0m13:00:49.756348 [debug] [Thread-1 (]: SQL status: SUCCESS 5 in 0.0 seconds
+[0m13:00:49.767279 [debug] [Thread-1 (]: 
+    In "AIRBNB"."DEV"."FCT_REVIEWS":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+[0m13:00:49.775404 [debug] [Thread-1 (]: Writing runtime sql for node "model.airbnb.fct_reviews"
+[0m13:00:49.776249 [debug] [Thread-1 (]: Using snowflake connection "model.airbnb.fct_reviews"
+[0m13:00:49.776490 [debug] [Thread-1 (]: On model.airbnb.fct_reviews: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "model.airbnb.fct_reviews"} */
+-- back compat for old kwarg name
+  
+  begin;
+[0m13:00:50.147633 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m13:00:50.149117 [debug] [Thread-1 (]: Using snowflake connection "model.airbnb.fct_reviews"
+[0m13:00:50.150296 [debug] [Thread-1 (]: On model.airbnb.fct_reviews: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "model.airbnb.fct_reviews"} */
+insert into AIRBNB.DEV.fct_reviews ("REVIEW_TEXT", "REVIEW_DATE", "REVIEW_SENTIMENT", "LISTING_ID", "REVIEWER_NAME")
+        (
+            select "REVIEW_TEXT", "REVIEW_DATE", "REVIEW_SENTIMENT", "LISTING_ID", "REVIEWER_NAME"
+            from AIRBNB.DEV.fct_reviews__dbt_tmp
+        );
+[0m13:00:51.375604 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m13:00:51.378147 [debug] [Thread-1 (]: Using snowflake connection "model.airbnb.fct_reviews"
+[0m13:00:51.379422 [debug] [Thread-1 (]: On model.airbnb.fct_reviews: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "model.airbnb.fct_reviews"} */
+COMMIT
+[0m13:00:52.106772 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m13:00:52.127087 [debug] [Thread-1 (]: Using snowflake connection "model.airbnb.fct_reviews"
+[0m13:00:52.127672 [debug] [Thread-1 (]: On model.airbnb.fct_reviews: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "model.airbnb.fct_reviews"} */
+drop view if exists AIRBNB.DEV.fct_reviews__dbt_tmp cascade
+[0m13:00:52.501121 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m13:00:52.533247 [debug] [Thread-1 (]: Timing info for model.airbnb.fct_reviews (execute): 13:00:40.432949 => 13:00:52.532992
+[0m13:00:52.533902 [debug] [Thread-1 (]: On model.airbnb.fct_reviews: Close
+[0m13:00:53.256132 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '09799a9f-2521-441c-89aa-d387d2486434', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13086ffa0>]}
+[0m13:00:53.258185 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model DEV.fct_reviews ........................ [[32mSUCCESS 1[0m in 12.83s]
+[0m13:00:53.259785 [debug] [Thread-1 (]: Finished running node model.airbnb.fct_reviews
+[0m13:00:53.262373 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:00:53.262870 [debug] [MainThread]: Connection 'model.airbnb.fct_reviews' was properly closed.
+[0m13:00:53.263358 [info ] [MainThread]: 
+[0m13:00:53.263903 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 21.44 seconds (21.44s).
+[0m13:00:53.264873 [debug] [MainThread]: Command end result
+[0m13:00:53.277704 [info ] [MainThread]: 
+[0m13:00:53.278331 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:00:53.278751 [info ] [MainThread]: 
+[0m13:00:53.279199 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m13:00:53.279909 [debug] [MainThread]: Command `dbt run` succeeded at 13:00:53.279799 after 22.03 seconds
+[0m13:00:53.280401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1033b5600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11be94d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1309138b0>]}
+[0m13:00:53.280894 [debug] [MainThread]: Flushing usage events
