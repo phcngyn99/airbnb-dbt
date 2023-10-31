@@ -3607,3 +3607,81 @@ drop view if exists AIRBNB.DEV.fct_reviews__dbt_tmp cascade
 [0m13:39:32.821880 [debug] [MainThread]: Command `dbt run` succeeded at 13:39:32.821778 after 19.20 seconds
 [0m13:39:32.822308 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104a91090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11cb24d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d1a2a40>]}
 [0m13:39:32.822770 [debug] [MainThread]: Flushing usage events
+[0m13:56:31.626359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1032c14e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10550df90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10550d510>]}
+
+
+============================== 13:56:31.629057 | dcda7bba-af43-4a17-8e1d-b2a90c26cbb7 ==============================
+[0m13:56:31.629057 [info ] [MainThread]: Running with dbt=1.6.5
+[0m13:56:31.629400 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt seed', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:56:32.146891 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dcda7bba-af43-4a17-8e1d-b2a90c26cbb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10550d540>]}
+[0m13:56:32.155038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'dcda7bba-af43-4a17-8e1d-b2a90c26cbb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b234c70>]}
+[0m13:56:32.155405 [info ] [MainThread]: Registered adapter: snowflake=1.6.4
+[0m13:56:32.166319 [debug] [MainThread]: checksum: aab365d456d99653250b9db50d1a1ebb1796991a326d59c2eea7a74da9519161, vars: {}, profile: , target: , version: 1.6.5
+[0m13:56:32.171384 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m13:56:32.171677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'dcda7bba-af43-4a17-8e1d-b2a90c26cbb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b237af0>]}
+[0m13:56:32.625838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'dcda7bba-af43-4a17-8e1d-b2a90c26cbb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b8bc0a0>]}
+[0m13:56:32.631333 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'dcda7bba-af43-4a17-8e1d-b2a90c26cbb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b3abf10>]}
+[0m13:56:32.631602 [info ] [MainThread]: Found 7 models, 1 seed, 3 sources, 0 exposures, 0 metrics, 375 macros, 0 groups, 0 semantic models
+[0m13:56:32.631807 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dcda7bba-af43-4a17-8e1d-b2a90c26cbb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b40fa60>]}
+[0m13:56:32.632540 [info ] [MainThread]: 
+[0m13:56:32.632927 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:56:32.633443 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_AIRBNB'
+[0m13:56:32.640178 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB"
+[0m13:56:32.640415 [debug] [ThreadPool]: On list_AIRBNB: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB"} */
+show terse schemas in database AIRBNB
+    limit 10000
+[0m13:56:32.640580 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:56:34.421653 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.0 seconds
+[0m13:56:34.423898 [debug] [ThreadPool]: On list_AIRBNB: Close
+[0m13:56:35.004742 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_AIRBNB, now list_AIRBNB_DEV)
+[0m13:56:35.019141 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_DEV"
+[0m13:56:35.019741 [debug] [ThreadPool]: On list_AIRBNB_DEV: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB_DEV"} */
+show terse objects in AIRBNB.DEV limit 10000
+[0m13:56:35.020150 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:56:37.085737 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.0 seconds
+[0m13:56:37.091137 [debug] [ThreadPool]: On list_AIRBNB_DEV: Close
+[0m13:56:37.975537 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dcda7bba-af43-4a17-8e1d-b2a90c26cbb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b237370>]}
+[0m13:56:37.977203 [info ] [MainThread]: Concurrency: 7 threads (target='dev')
+[0m13:56:37.977786 [info ] [MainThread]: 
+[0m13:56:37.981695 [debug] [Thread-1 (]: Began running node seed.airbnb.seed_full_moon_dates
+[0m13:56:37.982492 [info ] [Thread-1 (]: 1 of 1 START seed file DEV.seed_full_moon_dates ................................ [RUN]
+[0m13:56:37.984132 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_AIRBNB_DEV, now seed.airbnb.seed_full_moon_dates)
+[0m13:56:37.984862 [debug] [Thread-1 (]: Began compiling node seed.airbnb.seed_full_moon_dates
+[0m13:56:37.985584 [debug] [Thread-1 (]: Timing info for seed.airbnb.seed_full_moon_dates (compile): 13:56:37.985309 => 13:56:37.985313
+[0m13:56:37.986149 [debug] [Thread-1 (]: Began executing node seed.airbnb.seed_full_moon_dates
+[0m13:56:38.024062 [debug] [Thread-1 (]: Using snowflake connection "seed.airbnb.seed_full_moon_dates"
+[0m13:56:38.024488 [debug] [Thread-1 (]: On seed.airbnb.seed_full_moon_dates: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "seed.airbnb.seed_full_moon_dates"} */
+create table AIRBNB.DEV.seed_full_moon_dates (full_moon_date date)
+[0m13:56:38.024794 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:56:39.947810 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m13:56:39.971585 [debug] [Thread-1 (]: Using snowflake connection "seed.airbnb.seed_full_moon_dates"
+[0m13:56:39.972116 [debug] [Thread-1 (]: On seed.airbnb.seed_full_moon_dates: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "seed.airbnb.seed_full_moon_dates"} */
+BEGIN
+[0m13:56:40.324542 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m13:56:40.330060 [debug] [Thread-1 (]: Using snowflake connection "seed.airbnb.seed_full_moon_dates"
+[0m13:56:40.330833 [debug] [Thread-1 (]: On seed.airbnb.seed_full_moon_dates: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "seed.airbnb.seed_full_moon_dates"} */
+insert into AIRBNB.DEV.seed_full_moon_dates (full_moon_date) values
+            (%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%...
+[0m13:56:41.665108 [debug] [Thread-1 (]: SQL status: SUCCESS 272 in 1.0 seconds
+[0m13:56:41.666281 [debug] [Thread-1 (]: Using snowflake connection "seed.airbnb.seed_full_moon_dates"
+[0m13:56:41.667210 [debug] [Thread-1 (]: On seed.airbnb.seed_full_moon_dates: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "seed.airbnb.seed_full_moon_dates"} */
+COMMIT
+[0m13:56:42.392045 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m13:56:42.406638 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.airbnb.seed_full_moon_dates"
+[0m13:56:42.434527 [debug] [Thread-1 (]: Timing info for seed.airbnb.seed_full_moon_dates (execute): 13:56:37.986551 => 13:56:42.434309
+[0m13:56:42.435064 [debug] [Thread-1 (]: On seed.airbnb.seed_full_moon_dates: Close
+[0m13:56:42.994590 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dcda7bba-af43-4a17-8e1d-b2a90c26cbb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b89aad0>]}
+[0m13:56:42.996225 [info ] [Thread-1 (]: 1 of 1 OK loaded seed file DEV.seed_full_moon_dates ............................ [[32mINSERT 272[0m in 5.01s]
+[0m13:56:42.997964 [debug] [Thread-1 (]: Finished running node seed.airbnb.seed_full_moon_dates
+[0m13:56:43.000807 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:56:43.001405 [debug] [MainThread]: Connection 'seed.airbnb.seed_full_moon_dates' was properly closed.
+[0m13:56:43.001932 [info ] [MainThread]: 
+[0m13:56:43.002477 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 10.37 seconds (10.37s).
+[0m13:56:43.003431 [debug] [MainThread]: Command end result
+[0m13:56:43.014731 [info ] [MainThread]: 
+[0m13:56:43.015485 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:56:43.015935 [info ] [MainThread]: 
+[0m13:56:43.016369 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m13:56:43.017143 [debug] [MainThread]: Command `dbt seed` succeeded at 13:56:43.017014 after 11.40 seconds
+[0m13:56:43.017652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1032c14e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b880520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b3a9f60>]}
+[0m13:56:43.018161 [debug] [MainThread]: Flushing usage events
