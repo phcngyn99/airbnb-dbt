@@ -7355,3 +7355,989 @@ having count(*) > 1
 [0m18:04:22.480196 [debug] [MainThread]: Command `dbt test` succeeded at 18:04:22.480093 after 14.92 seconds
 [0m18:04:22.480642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107499600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x144b7fee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x144b7e560>]}
 [0m18:04:22.481104 [debug] [MainThread]: Flushing usage events
+[0m10:10:13.334074 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103d995d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10657a1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10657a020>]}
+
+
+============================== 10:10:13.338013 | af443cd6-e9a2-422b-823d-8c570bb1574e ==============================
+[0m10:10:13.338013 [info ] [MainThread]: Running with dbt=1.6.5
+[0m10:10:13.338540 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt docs generate', 'send_anonymous_usage_stats': 'True'}
+[0m10:10:14.143812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'af443cd6-e9a2-422b-823d-8c570bb1574e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106579ed0>]}
+[0m10:10:14.157217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'af443cd6-e9a2-422b-823d-8c570bb1574e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fa24e20>]}
+[0m10:10:14.157986 [info ] [MainThread]: Registered adapter: snowflake=1.6.4
+[0m10:10:14.174390 [debug] [MainThread]: checksum: aab365d456d99653250b9db50d1a1ebb1796991a326d59c2eea7a74da9519161, vars: {}, profile: , target: , version: 1.6.5
+[0m10:10:14.221177 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:10:14.221588 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:10:14.227753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'af443cd6-e9a2-422b-823d-8c570bb1574e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x131385780>]}
+[0m10:10:14.231255 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'af443cd6-e9a2-422b-823d-8c570bb1574e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x131348c40>]}
+[0m10:10:14.231668 [info ] [MainThread]: Found 8 models, 1 seed, 2 snapshots, 9 tests, 3 sources, 0 exposures, 0 metrics, 377 macros, 0 groups, 0 semantic models
+[0m10:10:14.231985 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'af443cd6-e9a2-422b-823d-8c570bb1574e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x131348ca0>]}
+[0m10:10:14.233735 [info ] [MainThread]: 
+[0m10:10:14.234353 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m10:10:14.235428 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_AIRBNB_SNAPSHOT'
+[0m10:10:14.236089 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_AIRBNB_DEV'
+[0m10:10:14.243209 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_airbnb_SNAPSHOT'
+[0m10:10:14.250058 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_SNAPSHOT"
+[0m10:10:14.252196 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_DEV"
+[0m10:10:14.253821 [debug] [ThreadPool]: Using snowflake connection "list_airbnb_SNAPSHOT"
+[0m10:10:14.254131 [debug] [ThreadPool]: On list_AIRBNB_SNAPSHOT: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB_SNAPSHOT"} */
+show terse objects in AIRBNB.SNAPSHOT limit 10000
+[0m10:10:14.254412 [debug] [ThreadPool]: On list_AIRBNB_DEV: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB_DEV"} */
+show terse objects in AIRBNB.DEV limit 10000
+[0m10:10:14.254705 [debug] [ThreadPool]: On list_airbnb_SNAPSHOT: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_airbnb_SNAPSHOT"} */
+show terse objects in airbnb.SNAPSHOT limit 10000
+[0m10:10:14.255033 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:10:14.255311 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:10:14.255596 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:10:17.827369 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 4.0 seconds
+[0m10:10:17.831462 [debug] [ThreadPool]: On list_AIRBNB_DEV: Close
+[0m10:10:18.551924 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 4.0 seconds
+[0m10:10:18.554412 [debug] [ThreadPool]: On list_airbnb_SNAPSHOT: Close
+[0m10:10:18.963496 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 5.0 seconds
+[0m10:10:18.968747 [debug] [ThreadPool]: On list_AIRBNB_SNAPSHOT: Close
+[0m10:10:19.516302 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'af443cd6-e9a2-422b-823d-8c570bb1574e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x131348790>]}
+[0m10:10:19.517959 [info ] [MainThread]: Concurrency: 7 threads (target='dev')
+[0m10:10:19.518553 [info ] [MainThread]: 
+[0m10:10:19.522578 [debug] [Thread-1 (]: Began running node model.airbnb.src_hosts
+[0m10:10:19.523289 [debug] [Thread-2 (]: Began running node model.airbnb.src_listings
+[0m10:10:19.525045 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_AIRBNB_SNAPSHOT, now model.airbnb.src_hosts)
+[0m10:10:19.525668 [debug] [Thread-4 (]: Began running node seed.airbnb.seed_full_moon_dates
+[0m10:10:19.526332 [debug] [Thread-5 (]: Began running node snapshot.airbnb.scd_raw_hosts
+[0m10:10:19.527274 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_AIRBNB_DEV, now model.airbnb.src_listings)
+[0m10:10:19.527839 [debug] [Thread-6 (]: Began running node snapshot.airbnb.scd_raw_listings
+[0m10:10:19.528711 [debug] [Thread-3 (]: Began running node model.airbnb.src_reviews
+[0m10:10:19.529169 [debug] [Thread-1 (]: Began compiling node model.airbnb.src_hosts
+[0m10:10:19.530085 [debug] [Thread-4 (]: Acquiring new snowflake connection 'seed.airbnb.seed_full_moon_dates'
+[0m10:10:19.530948 [debug] [Thread-5 (]: Acquiring new snowflake connection 'snapshot.airbnb.scd_raw_hosts'
+[0m10:10:19.531406 [debug] [Thread-2 (]: Began compiling node model.airbnb.src_listings
+[0m10:10:19.532241 [debug] [Thread-6 (]: Acquiring new snowflake connection 'snapshot.airbnb.scd_raw_listings'
+[0m10:10:19.532999 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_airbnb_SNAPSHOT, now model.airbnb.src_reviews)
+[0m10:10:19.542730 [debug] [Thread-1 (]: Writing injected SQL for node "model.airbnb.src_hosts"
+[0m10:10:19.543235 [debug] [Thread-4 (]: Began compiling node seed.airbnb.seed_full_moon_dates
+[0m10:10:19.543639 [debug] [Thread-5 (]: Began compiling node snapshot.airbnb.scd_raw_hosts
+[0m10:10:19.546527 [debug] [Thread-2 (]: Writing injected SQL for node "model.airbnb.src_listings"
+[0m10:10:19.547016 [debug] [Thread-6 (]: Began compiling node snapshot.airbnb.scd_raw_listings
+[0m10:10:19.547461 [debug] [Thread-3 (]: Began compiling node model.airbnb.src_reviews
+[0m10:10:19.549524 [debug] [Thread-4 (]: Timing info for seed.airbnb.seed_full_moon_dates (compile): 10:10:19.547910 => 10:10:19.549314
+[0m10:10:19.552796 [debug] [Thread-5 (]: Timing info for snapshot.airbnb.scd_raw_hosts (compile): 10:10:19.549847 => 10:10:19.552597
+[0m10:10:19.553270 [debug] [Thread-1 (]: Timing info for model.airbnb.src_hosts (compile): 10:10:19.533355 => 10:10:19.553062
+[0m10:10:19.557828 [debug] [Thread-6 (]: Timing info for snapshot.airbnb.scd_raw_listings (compile): 10:10:19.553645 => 10:10:19.557630
+[0m10:10:19.560061 [debug] [Thread-3 (]: Writing injected SQL for node "model.airbnb.src_reviews"
+[0m10:10:19.560441 [debug] [Thread-4 (]: Began executing node seed.airbnb.seed_full_moon_dates
+[0m10:10:19.560788 [debug] [Thread-2 (]: Timing info for model.airbnb.src_listings (compile): 10:10:19.543927 => 10:10:19.560638
+[0m10:10:19.561131 [debug] [Thread-5 (]: Began executing node snapshot.airbnb.scd_raw_hosts
+[0m10:10:19.561852 [debug] [Thread-1 (]: Finished running node model.airbnb.src_hosts
+[0m10:10:19.562156 [debug] [Thread-6 (]: Began executing node snapshot.airbnb.scd_raw_listings
+[0m10:10:19.562590 [debug] [Thread-4 (]: Timing info for seed.airbnb.seed_full_moon_dates (execute): 10:10:19.562443 => 10:10:19.562450
+[0m10:10:19.563245 [debug] [Thread-2 (]: Finished running node model.airbnb.src_listings
+[0m10:10:19.563609 [debug] [Thread-5 (]: Timing info for snapshot.airbnb.scd_raw_hosts (execute): 10:10:19.563473 => 10:10:19.563478
+[0m10:10:19.563917 [debug] [Thread-3 (]: Timing info for model.airbnb.src_reviews (compile): 10:10:19.558182 => 10:10:19.563803
+[0m10:10:19.564372 [debug] [Thread-7 (]: Began running node model.airbnb.dim_hosts_cleansed
+[0m10:10:19.564726 [debug] [Thread-6 (]: Timing info for snapshot.airbnb.scd_raw_listings (execute): 10:10:19.564577 => 10:10:19.564583
+[0m10:10:19.565384 [debug] [Thread-4 (]: Finished running node seed.airbnb.seed_full_moon_dates
+[0m10:10:19.566148 [debug] [Thread-5 (]: Finished running node snapshot.airbnb.scd_raw_hosts
+[0m10:10:19.566438 [debug] [Thread-1 (]: Began running node model.airbnb.dim_listings_cleansed
+[0m10:10:19.567053 [debug] [Thread-3 (]: Finished running node model.airbnb.src_reviews
+[0m10:10:19.567582 [debug] [Thread-7 (]: Acquiring new snowflake connection 'model.airbnb.dim_hosts_cleansed'
+[0m10:10:19.568294 [debug] [Thread-6 (]: Finished running node snapshot.airbnb.scd_raw_listings
+[0m10:10:19.568943 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.airbnb.src_hosts, now model.airbnb.dim_listings_cleansed)
+[0m10:10:19.569393 [debug] [Thread-2 (]: Began running node model.airbnb.fct_reviews
+[0m10:10:19.569686 [debug] [Thread-4 (]: Began running node model.airbnb.full_moon_reviews
+[0m10:10:19.569953 [debug] [Thread-7 (]: Began compiling node model.airbnb.dim_hosts_cleansed
+[0m10:10:19.570311 [debug] [Thread-1 (]: Began compiling node model.airbnb.dim_listings_cleansed
+[0m10:10:19.570781 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.airbnb.src_listings, now model.airbnb.fct_reviews)
+[0m10:10:19.571249 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly seed.airbnb.seed_full_moon_dates, now model.airbnb.full_moon_reviews)
+[0m10:10:19.575682 [debug] [Thread-7 (]: Writing injected SQL for node "model.airbnb.dim_hosts_cleansed"
+[0m10:10:19.581311 [debug] [Thread-1 (]: Writing injected SQL for node "model.airbnb.dim_listings_cleansed"
+[0m10:10:19.581648 [debug] [Thread-2 (]: Began compiling node model.airbnb.fct_reviews
+[0m10:10:19.581944 [debug] [Thread-4 (]: Began compiling node model.airbnb.full_moon_reviews
+[0m10:10:19.591126 [debug] [Thread-2 (]: Writing injected SQL for node "model.airbnb.fct_reviews"
+[0m10:10:19.596945 [debug] [Thread-4 (]: Writing injected SQL for node "model.airbnb.full_moon_reviews"
+[0m10:10:19.597361 [debug] [Thread-7 (]: Timing info for model.airbnb.dim_hosts_cleansed (compile): 10:10:19.571464 => 10:10:19.597204
+[0m10:10:19.597699 [debug] [Thread-1 (]: Timing info for model.airbnb.dim_listings_cleansed (compile): 10:10:19.575960 => 10:10:19.597569
+[0m10:10:19.598129 [debug] [Thread-7 (]: Began executing node model.airbnb.dim_hosts_cleansed
+[0m10:10:19.598452 [debug] [Thread-1 (]: Began executing node model.airbnb.dim_listings_cleansed
+[0m10:10:19.598850 [debug] [Thread-7 (]: Timing info for model.airbnb.dim_hosts_cleansed (execute): 10:10:19.598702 => 10:10:19.598710
+[0m10:10:19.599295 [debug] [Thread-4 (]: Timing info for model.airbnb.full_moon_reviews (compile): 10:10:19.591414 => 10:10:19.599119
+[0m10:10:19.599655 [debug] [Thread-1 (]: Timing info for model.airbnb.dim_listings_cleansed (execute): 10:10:19.599518 => 10:10:19.599523
+[0m10:10:19.599977 [debug] [Thread-2 (]: Timing info for model.airbnb.fct_reviews (compile): 10:10:19.582298 => 10:10:19.599850
+[0m10:10:19.600701 [debug] [Thread-7 (]: Finished running node model.airbnb.dim_hosts_cleansed
+[0m10:10:19.601004 [debug] [Thread-4 (]: Began executing node model.airbnb.full_moon_reviews
+[0m10:10:19.601684 [debug] [Thread-1 (]: Finished running node model.airbnb.dim_listings_cleansed
+[0m10:10:19.601993 [debug] [Thread-2 (]: Began executing node model.airbnb.fct_reviews
+[0m10:10:19.602440 [debug] [Thread-4 (]: Timing info for model.airbnb.full_moon_reviews (execute): 10:10:19.602299 => 10:10:19.602305
+[0m10:10:19.603041 [debug] [Thread-2 (]: Timing info for model.airbnb.fct_reviews (execute): 10:10:19.602904 => 10:10:19.602909
+[0m10:10:19.603329 [debug] [Thread-3 (]: Began running node model.airbnb.dim_hosts_listings
+[0m10:10:19.603627 [debug] [Thread-5 (]: Began running node test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m10:10:19.603929 [debug] [Thread-6 (]: Began running node test.airbnb.dim_listings_minimum_nights
+[0m10:10:19.604214 [debug] [Thread-7 (]: Began running node test.airbnb.dim_listings_no_nul_cols
+[0m10:10:19.604865 [debug] [Thread-4 (]: Finished running node model.airbnb.full_moon_reviews
+[0m10:10:19.605169 [debug] [Thread-1 (]: Began running node test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329
+[0m10:10:19.605843 [debug] [Thread-2 (]: Finished running node model.airbnb.fct_reviews
+[0m10:10:19.606328 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.airbnb.src_reviews, now model.airbnb.dim_hosts_listings)
+[0m10:10:19.606813 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly snapshot.airbnb.scd_raw_hosts, now test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af)
+[0m10:10:19.607291 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly snapshot.airbnb.scd_raw_listings, now test.airbnb.dim_listings_minimum_nights)
+[0m10:10:19.607752 [debug] [Thread-7 (]: Re-using an available connection from the pool (formerly model.airbnb.dim_hosts_cleansed, now test.airbnb.dim_listings_no_nul_cols)
+[0m10:10:19.608077 [debug] [Thread-4 (]: Began running node test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m10:10:19.608593 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.airbnb.dim_listings_cleansed, now test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329)
+[0m10:10:19.608941 [debug] [Thread-2 (]: Began running node test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m10:10:19.609258 [debug] [Thread-3 (]: Began compiling node model.airbnb.dim_hosts_listings
+[0m10:10:19.609570 [debug] [Thread-5 (]: Began compiling node test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m10:10:19.609870 [debug] [Thread-6 (]: Began compiling node test.airbnb.dim_listings_minimum_nights
+[0m10:10:19.610197 [debug] [Thread-7 (]: Began compiling node test.airbnb.dim_listings_no_nul_cols
+[0m10:10:19.610685 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.airbnb.full_moon_reviews, now test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be)
+[0m10:10:19.610985 [debug] [Thread-1 (]: Began compiling node test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329
+[0m10:10:19.611458 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.airbnb.fct_reviews, now test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9)
+[0m10:10:19.614024 [debug] [Thread-3 (]: Writing injected SQL for node "model.airbnb.dim_hosts_listings"
+[0m10:10:19.625633 [debug] [Thread-5 (]: Writing injected SQL for node "test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"
+[0m10:10:19.627789 [debug] [Thread-6 (]: Writing injected SQL for node "test.airbnb.dim_listings_minimum_nights"
+[0m10:10:19.636717 [debug] [Thread-7 (]: Using snowflake connection "test.airbnb.dim_listings_no_nul_cols"
+[0m10:10:19.637088 [debug] [Thread-4 (]: Began compiling node test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m10:10:19.640736 [debug] [Thread-1 (]: Writing injected SQL for node "test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329"
+[0m10:10:19.641085 [debug] [Thread-2 (]: Began compiling node test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m10:10:19.641729 [debug] [Thread-7 (]: On test.airbnb.dim_listings_no_nul_cols: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dim_listings_no_nul_cols"} */
+describe table AIRBNB.DEV.dim_listings_cleansed
+[0m10:10:19.648728 [debug] [Thread-3 (]: Timing info for model.airbnb.dim_hosts_listings (compile): 10:10:19.611684 => 10:10:19.648569
+[0m10:10:19.649212 [debug] [Thread-4 (]: Writing injected SQL for node "test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be"
+[0m10:10:19.649620 [debug] [Thread-5 (]: Timing info for test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af (compile): 10:10:19.614282 => 10:10:19.649452
+[0m10:10:19.649963 [debug] [Thread-6 (]: Timing info for test.airbnb.dim_listings_minimum_nights (compile): 10:10:19.625919 => 10:10:19.649839
+[0m10:10:19.653110 [debug] [Thread-2 (]: Writing injected SQL for node "test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9"
+[0m10:10:19.653487 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m10:10:19.653822 [debug] [Thread-3 (]: Began executing node model.airbnb.dim_hosts_listings
+[0m10:10:19.654163 [debug] [Thread-1 (]: Timing info for test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329 (compile): 10:10:19.637321 => 10:10:19.654023
+[0m10:10:19.654539 [debug] [Thread-5 (]: Began executing node test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m10:10:19.654873 [debug] [Thread-6 (]: Began executing node test.airbnb.dim_listings_minimum_nights
+[0m10:10:19.655271 [debug] [Thread-4 (]: Timing info for test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be (compile): 10:10:19.642103 => 10:10:19.655133
+[0m10:10:19.656492 [debug] [Thread-3 (]: Timing info for model.airbnb.dim_hosts_listings (execute): 10:10:19.656333 => 10:10:19.656344
+[0m10:10:19.656842 [debug] [Thread-2 (]: Timing info for test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9 (compile): 10:10:19.650214 => 10:10:19.656700
+[0m10:10:19.657187 [debug] [Thread-1 (]: Began executing node test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329
+[0m10:10:19.657578 [debug] [Thread-5 (]: Timing info for test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af (execute): 10:10:19.657411 => 10:10:19.657417
+[0m10:10:19.657942 [debug] [Thread-6 (]: Timing info for test.airbnb.dim_listings_minimum_nights (execute): 10:10:19.657811 => 10:10:19.657816
+[0m10:10:19.658277 [debug] [Thread-4 (]: Began executing node test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m10:10:19.659373 [debug] [Thread-3 (]: Finished running node model.airbnb.dim_hosts_listings
+[0m10:10:19.659906 [debug] [Thread-2 (]: Began executing node test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m10:10:19.660290 [debug] [Thread-1 (]: Timing info for test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329 (execute): 10:10:19.660137 => 10:10:19.660143
+[0m10:10:19.661007 [debug] [Thread-5 (]: Finished running node test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m10:10:19.661715 [debug] [Thread-6 (]: Finished running node test.airbnb.dim_listings_minimum_nights
+[0m10:10:19.662071 [debug] [Thread-4 (]: Timing info for test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be (execute): 10:10:19.661934 => 10:10:19.661939
+[0m10:10:19.662430 [debug] [Thread-3 (]: Began running node test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m10:10:19.662907 [debug] [Thread-2 (]: Timing info for test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9 (execute): 10:10:19.662764 => 10:10:19.662769
+[0m10:10:19.663569 [debug] [Thread-1 (]: Finished running node test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329
+[0m10:10:19.663917 [debug] [Thread-5 (]: Began running node test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m10:10:19.664274 [debug] [Thread-6 (]: Began running node test.airbnb.consistent_created_at
+[0m10:10:19.664954 [debug] [Thread-4 (]: Finished running node test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m10:10:19.665442 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.airbnb.dim_hosts_listings, now test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad)
+[0m10:10:19.666091 [debug] [Thread-2 (]: Finished running node test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m10:10:19.666698 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af, now test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e)
+[0m10:10:19.667214 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly test.airbnb.dim_listings_minimum_nights, now test.airbnb.consistent_created_at)
+[0m10:10:19.667591 [debug] [Thread-3 (]: Began compiling node test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m10:10:19.667970 [debug] [Thread-5 (]: Began compiling node test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m10:10:19.668269 [debug] [Thread-6 (]: Began compiling node test.airbnb.consistent_created_at
+[0m10:10:19.674914 [debug] [Thread-3 (]: Writing injected SQL for node "test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"
+[0m10:10:19.681106 [debug] [Thread-5 (]: Writing injected SQL for node "test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e"
+[0m10:10:19.683343 [debug] [Thread-6 (]: Writing injected SQL for node "test.airbnb.consistent_created_at"
+[0m10:10:19.684401 [debug] [Thread-5 (]: Timing info for test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e (compile): 10:10:19.675201 => 10:10:19.684243
+[0m10:10:19.684791 [debug] [Thread-3 (]: Timing info for test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad (compile): 10:10:19.668482 => 10:10:19.684629
+[0m10:10:19.685136 [debug] [Thread-5 (]: Began executing node test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m10:10:19.685461 [debug] [Thread-6 (]: Timing info for test.airbnb.consistent_created_at (compile): 10:10:19.681377 => 10:10:19.685336
+[0m10:10:19.685770 [debug] [Thread-3 (]: Began executing node test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m10:10:19.686137 [debug] [Thread-5 (]: Timing info for test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e (execute): 10:10:19.686002 => 10:10:19.686009
+[0m10:10:19.686429 [debug] [Thread-6 (]: Began executing node test.airbnb.consistent_created_at
+[0m10:10:19.686791 [debug] [Thread-3 (]: Timing info for test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad (execute): 10:10:19.686645 => 10:10:19.686649
+[0m10:10:19.687490 [debug] [Thread-5 (]: Finished running node test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m10:10:19.687860 [debug] [Thread-6 (]: Timing info for test.airbnb.consistent_created_at (execute): 10:10:19.687721 => 10:10:19.687727
+[0m10:10:19.688541 [debug] [Thread-3 (]: Finished running node test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m10:10:19.689262 [debug] [Thread-6 (]: Finished running node test.airbnb.consistent_created_at
+[0m10:10:21.818626 [debug] [Thread-7 (]: SQL status: SUCCESS 8 in 2.0 seconds
+[0m10:10:21.824607 [debug] [Thread-7 (]: Writing injected SQL for node "test.airbnb.dim_listings_no_nul_cols"
+[0m10:10:21.826501 [debug] [Thread-7 (]: Timing info for test.airbnb.dim_listings_no_nul_cols (compile): 10:10:19.628055 => 10:10:21.826188
+[0m10:10:21.827120 [debug] [Thread-7 (]: Began executing node test.airbnb.dim_listings_no_nul_cols
+[0m10:10:21.827779 [debug] [Thread-7 (]: Timing info for test.airbnb.dim_listings_no_nul_cols (execute): 10:10:21.827524 => 10:10:21.827541
+[0m10:10:21.828350 [debug] [Thread-7 (]: On test.airbnb.dim_listings_no_nul_cols: Close
+[0m10:10:22.436487 [debug] [Thread-7 (]: Finished running node test.airbnb.dim_listings_no_nul_cols
+[0m10:10:22.439229 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:10:22.440026 [debug] [MainThread]: Connection 'test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329' was properly closed.
+[0m10:10:22.440500 [debug] [MainThread]: Connection 'test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9' was properly closed.
+[0m10:10:22.440942 [debug] [MainThread]: Connection 'test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad' was properly closed.
+[0m10:10:22.441384 [debug] [MainThread]: Connection 'test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be' was properly closed.
+[0m10:10:22.441813 [debug] [MainThread]: Connection 'test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e' was properly closed.
+[0m10:10:22.442214 [debug] [MainThread]: Connection 'test.airbnb.consistent_created_at' was properly closed.
+[0m10:10:22.442611 [debug] [MainThread]: Connection 'test.airbnb.dim_listings_no_nul_cols' was properly closed.
+[0m10:10:22.446348 [debug] [MainThread]: Command end result
+[0m10:10:22.461998 [debug] [MainThread]: Acquiring new snowflake connection 'generate_catalog'
+[0m10:10:22.462446 [info ] [MainThread]: Building catalog
+[0m10:10:22.464639 [debug] [ThreadPool]: Acquiring new snowflake connection 'AIRBNB.information_schema'
+[0m10:10:22.465412 [debug] [ThreadPool]: Acquiring new snowflake connection 'airbnb.information_schema'
+[0m10:10:22.474056 [debug] [ThreadPool]: Using snowflake connection "AIRBNB.information_schema"
+[0m10:10:22.477980 [debug] [ThreadPool]: Using snowflake connection "airbnb.information_schema"
+[0m10:10:22.478536 [debug] [ThreadPool]: On AIRBNB.information_schema: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "connection_name": "AIRBNB.information_schema"} */
+with tables as (
+
+          select
+              table_catalog as "table_database",
+              table_schema as "table_schema",
+              table_name as "table_name",
+              table_type as "table_type",
+              comment as "table_comment",
+
+              -- note: this is the _role_ that owns the table
+              table_owner as "table_owner",
+
+              'Clustering Key' as "stats:clustering_key:label",
+              clustering_key as "stats:clustering_key:value",
+              'The key used to cluster this table' as "stats:clustering_key:description",
+              (clustering_key is not null) as "stats:clustering_key:include",
+
+              'Row Count' as "stats:row_count:label",
+              row_count as "stats:row_count:value",
+              'An approximate count of rows in this table' as "stats:row_count:description",
+              (row_count is not null) as "stats:row_count:include",
+
+              'Approximate Size' as "stats:bytes:label",
+              bytes as "stats:bytes:value",
+              'Approximate size of the table as reported by Snowflake' as "stats:bytes:description",
+              (bytes is not null) as "stats:bytes:include",
+
+              'Last Modified' as "stats:last_modified:label",
+              to_varchar(convert_timezone('UTC', last_altered), 'yyyy-mm-dd HH24:MI'||'UTC') as "stats:last_modified:value",
+              'The timestamp for last update/change' as "stats:last_modified:description",
+              (last_altered is not null and table_type='BASE TABLE') as "stats:last_modified:include"
+
+          from AIRBNB.INFORMATION_SCHEMA.tables
+          where (upper("table_schema") = upper('raw') or upper("table_schema") = upper('dev') or upper("table_schema") = upper('snapshot'))
+
+      ),
+
+      columns as (
+
+          select
+              table_catalog as "table_database",
+              table_schema as "table_schema",
+              table_name as "table_name",
+
+              column_name as "column_name",
+              ordinal_position as "column_index",
+              data_type as "column_type",
+              comment as "column_comment"
+
+          from AIRBNB.INFORMATION_SCHEMA.columns
+          where (upper("table_schema") = upper('raw') or upper("table_schema") = upper('dev') or upper("table_schema") = upper('snapshot'))
+      )
+
+      select *
+      from tables
+      join columns using ("table_database", "table_schema", "table_name")
+      order by "column_index"
+[0m10:10:22.479198 [debug] [ThreadPool]: On airbnb.information_schema: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "connection_name": "airbnb.information_schema"} */
+with tables as (
+
+          select
+              table_catalog as "table_database",
+              table_schema as "table_schema",
+              table_name as "table_name",
+              table_type as "table_type",
+              comment as "table_comment",
+
+              -- note: this is the _role_ that owns the table
+              table_owner as "table_owner",
+
+              'Clustering Key' as "stats:clustering_key:label",
+              clustering_key as "stats:clustering_key:value",
+              'The key used to cluster this table' as "stats:clustering_key:description",
+              (clustering_key is not null) as "stats:clustering_key:include",
+
+              'Row Count' as "stats:row_count:label",
+              row_count as "stats:row_count:value",
+              'An approximate count of rows in this table' as "stats:row_count:description",
+              (row_count is not null) as "stats:row_count:include",
+
+              'Approximate Size' as "stats:bytes:label",
+              bytes as "stats:bytes:value",
+              'Approximate size of the table as reported by Snowflake' as "stats:bytes:description",
+              (bytes is not null) as "stats:bytes:include",
+
+              'Last Modified' as "stats:last_modified:label",
+              to_varchar(convert_timezone('UTC', last_altered), 'yyyy-mm-dd HH24:MI'||'UTC') as "stats:last_modified:value",
+              'The timestamp for last update/change' as "stats:last_modified:description",
+              (last_altered is not null and table_type='BASE TABLE') as "stats:last_modified:include"
+
+          from airbnb.INFORMATION_SCHEMA.tables
+          where (upper("table_schema") = upper('snapshot'))
+
+      ),
+
+      columns as (
+
+          select
+              table_catalog as "table_database",
+              table_schema as "table_schema",
+              table_name as "table_name",
+
+              column_name as "column_name",
+              ordinal_position as "column_index",
+              data_type as "column_type",
+              comment as "column_comment"
+
+          from airbnb.INFORMATION_SCHEMA.columns
+          where (upper("table_schema") = upper('snapshot'))
+      )
+
+      select *
+      from tables
+      join columns using ("table_database", "table_schema", "table_name")
+      order by "column_index"
+[0m10:10:22.479657 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:10:22.479936 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:10:27.458647 [debug] [ThreadPool]: SQL status: SUCCESS 22 in 5.0 seconds
+[0m10:10:27.482836 [debug] [ThreadPool]: On airbnb.information_schema: Close
+[0m10:10:27.862588 [debug] [ThreadPool]: SQL status: SUCCESS 76 in 5.0 seconds
+[0m10:10:27.886256 [debug] [ThreadPool]: On AIRBNB.information_schema: Close
+[0m10:10:28.792124 [info ] [MainThread]: Catalog written to /Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb/target/catalog.json
+[0m10:10:28.792884 [debug] [MainThread]: Command `dbt docs generate` succeeded at 10:10:28.792799 after 15.48 seconds
+[0m10:10:28.793196 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m10:10:28.793437 [debug] [MainThread]: Connection 'AIRBNB.information_schema' was properly closed.
+[0m10:10:28.793660 [debug] [MainThread]: Connection 'airbnb.information_schema' was properly closed.
+[0m10:10:28.793931 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103d995d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x131332d70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fa24e20>]}
+[0m10:10:28.794246 [debug] [MainThread]: Flushing usage events
+[0m10:10:50.867298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1078e1600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109b2e110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109b2cd90>]}
+
+
+============================== 10:10:50.870977 | 9ee4dd05-e6f8-4b2e-a0ba-18c4cab875d5 ==============================
+[0m10:10:50.870977 [info ] [MainThread]: Running with dbt=1.6.5
+[0m10:10:50.871492 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt docs serve', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m10:10:51.632077 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9ee4dd05-e6f8-4b2e-a0ba-18c4cab875d5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109b2d5d0>]}
+[0m10:10:51.645585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9ee4dd05-e6f8-4b2e-a0ba-18c4cab875d5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f854d00>]}
+[0m10:10:51.867877 [error] [MainThread]: Encountered an error:
+[Errno 48] Address already in use
+[0m10:10:51.871232 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/cli/requires.py", line 87, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/cli/requires.py", line 72, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/cli/requires.py", line 143, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/cli/requires.py", line 172, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/cli/requires.py", line 219, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/cli/main.py", line 307, in docs_serve
+    results = task.run()
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/task/serve.py", line 23, in run
+    with socketserver.TCPServer(("", port), SimpleHTTPRequestHandler) as httpd:
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 48] Address already in use
+
+[0m10:10:51.882650 [debug] [MainThread]: Command `dbt docs serve` failed at 10:10:51.882225 after 1.03 seconds
+[0m10:10:51.883855 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1078e1600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f8551e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f8551b0>]}
+[0m10:10:51.885145 [debug] [MainThread]: Flushing usage events
+[0m10:12:11.104873 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102f35090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105182170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105180df0>]}
+
+
+============================== 10:12:11.108721 | 303e6a4a-410c-4e0f-b56b-15cb01013bbd ==============================
+[0m10:12:11.108721 [info ] [MainThread]: Running with dbt=1.6.5
+[0m10:12:11.109254 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt docs serve --port 8888', 'send_anonymous_usage_stats': 'True'}
+[0m10:12:11.860010 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '303e6a4a-410c-4e0f-b56b-15cb01013bbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105181630>]}
+[0m10:12:11.873279 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '303e6a4a-410c-4e0f-b56b-15cb01013bbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d924d60>]}
+[0m10:50:55.155367 [error] [MainThread]: Encountered an error:
+
+[0m10:50:55.165483 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/cli/requires.py", line 87, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/cli/requires.py", line 72, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/cli/requires.py", line 143, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/cli/requires.py", line 172, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/cli/requires.py", line 219, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/cli/main.py", line 307, in docs_serve
+    results = task.run()
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/site-packages/dbt/task/serve.py", line 28, in run
+    httpd.serve_forever()
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/socketserver.py", line 232, in serve_forever
+    ready = selector.select(poll_interval)
+  File "/Users/phuccnguyen99/miniconda3/lib/python3.10/selectors.py", line 416, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt
+
+[0m10:50:55.168264 [debug] [MainThread]: Command `dbt docs serve` failed at 10:50:55.167807 after 2010.73 seconds
+[0m10:50:55.169479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102f35090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d925420>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d9254e0>]}
+[0m10:50:55.170534 [debug] [MainThread]: Flushing usage events
+[0m10:51:05.095703 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c1d5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e6a020>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e695a0>]}
+
+
+============================== 10:51:05.099334 | 9e3df103-a151-4013-b0ef-863ff4ad2a4a ==============================
+[0m10:51:05.099334 [info ] [MainThread]: Running with dbt=1.6.5
+[0m10:51:05.099851 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb', 'log_path': '/Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt compile', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:51:05.906608 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9e3df103-a151-4013-b0ef-863ff4ad2a4a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e695d0>]}
+[0m10:51:05.920056 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9e3df103-a151-4013-b0ef-863ff4ad2a4a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11eb90d30>]}
+[0m10:51:05.920788 [info ] [MainThread]: Registered adapter: snowflake=1.6.4
+[0m10:51:05.936044 [debug] [MainThread]: checksum: aab365d456d99653250b9db50d1a1ebb1796991a326d59c2eea7a74da9519161, vars: {}, profile: , target: , version: 1.6.5
+[0m10:51:05.961570 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:51:05.961985 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:51:05.968343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9e3df103-a151-4013-b0ef-863ff4ad2a4a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f1d9690>]}
+[0m10:51:05.978626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9e3df103-a151-4013-b0ef-863ff4ad2a4a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f198c10>]}
+[0m10:51:05.979092 [info ] [MainThread]: Found 8 models, 1 seed, 2 snapshots, 9 tests, 3 sources, 0 exposures, 0 metrics, 377 macros, 0 groups, 0 semantic models
+[0m10:51:05.979414 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9e3df103-a151-4013-b0ef-863ff4ad2a4a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f198ca0>]}
+[0m10:51:05.981139 [info ] [MainThread]: 
+[0m10:51:05.981812 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m10:51:05.982856 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_airbnb_SNAPSHOT'
+[0m10:51:05.983469 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_AIRBNB_DEV'
+[0m10:51:05.995993 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_AIRBNB_SNAPSHOT'
+[0m10:51:05.996824 [debug] [ThreadPool]: Using snowflake connection "list_airbnb_SNAPSHOT"
+[0m10:51:05.998859 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_DEV"
+[0m10:51:06.000573 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_SNAPSHOT"
+[0m10:51:06.000910 [debug] [ThreadPool]: On list_airbnb_SNAPSHOT: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_airbnb_SNAPSHOT"} */
+show terse objects in airbnb.SNAPSHOT limit 10000
+[0m10:51:06.001196 [debug] [ThreadPool]: On list_AIRBNB_DEV: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB_DEV"} */
+show terse objects in AIRBNB.DEV limit 10000
+[0m10:51:06.001459 [debug] [ThreadPool]: On list_AIRBNB_SNAPSHOT: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB_SNAPSHOT"} */
+show terse objects in AIRBNB.SNAPSHOT limit 10000
+[0m10:51:06.001880 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:51:06.002167 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:51:06.002414 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:51:07.834256 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.0 seconds
+[0m10:51:07.838540 [debug] [ThreadPool]: On list_AIRBNB_SNAPSHOT: Close
+[0m10:51:07.896420 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.0 seconds
+[0m10:51:07.900787 [debug] [ThreadPool]: On list_airbnb_SNAPSHOT: Close
+[0m10:51:08.075407 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 2.0 seconds
+[0m10:51:08.080256 [debug] [ThreadPool]: On list_AIRBNB_DEV: Close
+[0m10:51:08.786698 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9e3df103-a151-4013-b0ef-863ff4ad2a4a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f202f50>]}
+[0m10:51:08.788217 [info ] [MainThread]: Concurrency: 7 threads (target='dev')
+[0m10:51:08.788632 [info ] [MainThread]: 
+[0m10:51:08.791307 [debug] [Thread-1 (]: Began running node model.airbnb.src_hosts
+[0m10:51:08.791675 [debug] [Thread-2 (]: Began running node model.airbnb.src_listings
+[0m10:51:08.792512 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_airbnb_SNAPSHOT, now model.airbnb.src_hosts)
+[0m10:51:08.792890 [debug] [Thread-4 (]: Began running node seed.airbnb.seed_full_moon_dates
+[0m10:51:08.793326 [debug] [Thread-3 (]: Began running node model.airbnb.src_reviews
+[0m10:51:08.793692 [debug] [Thread-5 (]: Began running node snapshot.airbnb.scd_raw_hosts
+[0m10:51:08.794207 [debug] [Thread-6 (]: Began running node snapshot.airbnb.scd_raw_listings
+[0m10:51:08.794808 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_AIRBNB_DEV, now model.airbnb.src_listings)
+[0m10:51:08.795154 [debug] [Thread-1 (]: Began compiling node model.airbnb.src_hosts
+[0m10:51:08.795721 [debug] [Thread-4 (]: Acquiring new snowflake connection 'seed.airbnb.seed_full_moon_dates'
+[0m10:51:08.796214 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_AIRBNB_SNAPSHOT, now model.airbnb.src_reviews)
+[0m10:51:08.796769 [debug] [Thread-5 (]: Acquiring new snowflake connection 'snapshot.airbnb.scd_raw_hosts'
+[0m10:51:08.797300 [debug] [Thread-6 (]: Acquiring new snowflake connection 'snapshot.airbnb.scd_raw_listings'
+[0m10:51:08.797597 [debug] [Thread-2 (]: Began compiling node model.airbnb.src_listings
+[0m10:51:08.804256 [debug] [Thread-1 (]: Writing injected SQL for node "model.airbnb.src_hosts"
+[0m10:51:08.804635 [debug] [Thread-4 (]: Began compiling node seed.airbnb.seed_full_moon_dates
+[0m10:51:08.804951 [debug] [Thread-3 (]: Began compiling node model.airbnb.src_reviews
+[0m10:51:08.805268 [debug] [Thread-5 (]: Began compiling node snapshot.airbnb.scd_raw_hosts
+[0m10:51:08.805561 [debug] [Thread-6 (]: Began compiling node snapshot.airbnb.scd_raw_listings
+[0m10:51:08.807708 [debug] [Thread-2 (]: Writing injected SQL for node "model.airbnb.src_listings"
+[0m10:51:08.809330 [debug] [Thread-4 (]: Timing info for seed.airbnb.seed_full_moon_dates (compile): 10:51:08.808063 => 10:51:08.809145
+[0m10:51:08.811528 [debug] [Thread-3 (]: Writing injected SQL for node "model.airbnb.src_reviews"
+[0m10:51:08.814188 [debug] [Thread-5 (]: Timing info for snapshot.airbnb.scd_raw_hosts (compile): 10:51:08.811825 => 10:51:08.814029
+[0m10:51:08.817114 [debug] [Thread-6 (]: Timing info for snapshot.airbnb.scd_raw_listings (compile): 10:51:08.814469 => 10:51:08.816902
+[0m10:51:08.817550 [debug] [Thread-1 (]: Timing info for model.airbnb.src_hosts (compile): 10:51:08.797815 => 10:51:08.817411
+[0m10:51:08.818079 [debug] [Thread-4 (]: Began executing node seed.airbnb.seed_full_moon_dates
+[0m10:51:08.818736 [debug] [Thread-5 (]: Began executing node snapshot.airbnb.scd_raw_hosts
+[0m10:51:08.819156 [debug] [Thread-2 (]: Timing info for model.airbnb.src_listings (compile): 10:51:08.805775 => 10:51:08.818980
+[0m10:51:08.819552 [debug] [Thread-6 (]: Began executing node snapshot.airbnb.scd_raw_listings
+[0m10:51:08.819938 [debug] [Thread-3 (]: Timing info for model.airbnb.src_reviews (compile): 10:51:08.809590 => 10:51:08.819801
+[0m10:51:08.820861 [debug] [Thread-1 (]: Finished running node model.airbnb.src_hosts
+[0m10:51:08.821316 [debug] [Thread-4 (]: Timing info for seed.airbnb.seed_full_moon_dates (execute): 10:51:08.821152 => 10:51:08.821160
+[0m10:51:08.821746 [debug] [Thread-5 (]: Timing info for snapshot.airbnb.scd_raw_hosts (execute): 10:51:08.821578 => 10:51:08.821585
+[0m10:51:08.822570 [debug] [Thread-2 (]: Finished running node model.airbnb.src_listings
+[0m10:51:08.823002 [debug] [Thread-6 (]: Timing info for snapshot.airbnb.scd_raw_listings (execute): 10:51:08.822853 => 10:51:08.822859
+[0m10:51:08.823681 [debug] [Thread-3 (]: Finished running node model.airbnb.src_reviews
+[0m10:51:08.824216 [debug] [Thread-7 (]: Began running node model.airbnb.dim_hosts_cleansed
+[0m10:51:08.824947 [debug] [Thread-4 (]: Finished running node seed.airbnb.seed_full_moon_dates
+[0m10:51:08.825665 [debug] [Thread-5 (]: Finished running node snapshot.airbnb.scd_raw_hosts
+[0m10:51:08.826189 [debug] [Thread-1 (]: Began running node model.airbnb.dim_listings_cleansed
+[0m10:51:08.826880 [debug] [Thread-6 (]: Finished running node snapshot.airbnb.scd_raw_listings
+[0m10:51:08.827349 [debug] [Thread-2 (]: Began running node model.airbnb.fct_reviews
+[0m10:51:08.827983 [debug] [Thread-7 (]: Acquiring new snowflake connection 'model.airbnb.dim_hosts_cleansed'
+[0m10:51:08.828496 [debug] [Thread-5 (]: Began running node model.airbnb.full_moon_reviews
+[0m10:51:08.829049 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.airbnb.src_hosts, now model.airbnb.dim_listings_cleansed)
+[0m10:51:08.829666 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.airbnb.src_listings, now model.airbnb.fct_reviews)
+[0m10:51:08.830016 [debug] [Thread-7 (]: Began compiling node model.airbnb.dim_hosts_cleansed
+[0m10:51:08.830538 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly snapshot.airbnb.scd_raw_hosts, now model.airbnb.full_moon_reviews)
+[0m10:51:08.830880 [debug] [Thread-1 (]: Began compiling node model.airbnb.dim_listings_cleansed
+[0m10:51:08.831202 [debug] [Thread-2 (]: Began compiling node model.airbnb.fct_reviews
+[0m10:51:08.837062 [debug] [Thread-7 (]: Writing injected SQL for node "model.airbnb.dim_hosts_cleansed"
+[0m10:51:08.837501 [debug] [Thread-5 (]: Began compiling node model.airbnb.full_moon_reviews
+[0m10:51:08.843268 [debug] [Thread-1 (]: Writing injected SQL for node "model.airbnb.dim_listings_cleansed"
+[0m10:51:08.852380 [debug] [Thread-2 (]: Writing injected SQL for node "model.airbnb.fct_reviews"
+[0m10:51:08.858245 [debug] [Thread-5 (]: Writing injected SQL for node "model.airbnb.full_moon_reviews"
+[0m10:51:08.858909 [debug] [Thread-7 (]: Timing info for model.airbnb.dim_hosts_cleansed (compile): 10:51:08.831450 => 10:51:08.858724
+[0m10:51:08.859491 [debug] [Thread-1 (]: Timing info for model.airbnb.dim_listings_cleansed (compile): 10:51:08.837742 => 10:51:08.859318
+[0m10:51:08.859819 [debug] [Thread-7 (]: Began executing node model.airbnb.dim_hosts_cleansed
+[0m10:51:08.860197 [debug] [Thread-2 (]: Timing info for model.airbnb.fct_reviews (compile): 10:51:08.843559 => 10:51:08.860053
+[0m10:51:08.860567 [debug] [Thread-1 (]: Began executing node model.airbnb.dim_listings_cleansed
+[0m10:51:08.860933 [debug] [Thread-5 (]: Timing info for model.airbnb.full_moon_reviews (compile): 10:51:08.852806 => 10:51:08.860790
+[0m10:51:08.861461 [debug] [Thread-7 (]: Timing info for model.airbnb.dim_hosts_cleansed (execute): 10:51:08.861168 => 10:51:08.861177
+[0m10:51:08.861787 [debug] [Thread-2 (]: Began executing node model.airbnb.fct_reviews
+[0m10:51:08.862174 [debug] [Thread-1 (]: Timing info for model.airbnb.dim_listings_cleansed (execute): 10:51:08.862037 => 10:51:08.862043
+[0m10:51:08.862496 [debug] [Thread-5 (]: Began executing node model.airbnb.full_moon_reviews
+[0m10:51:08.863266 [debug] [Thread-7 (]: Finished running node model.airbnb.dim_hosts_cleansed
+[0m10:51:08.863656 [debug] [Thread-2 (]: Timing info for model.airbnb.fct_reviews (execute): 10:51:08.863508 => 10:51:08.863515
+[0m10:51:08.864333 [debug] [Thread-1 (]: Finished running node model.airbnb.dim_listings_cleansed
+[0m10:51:08.864708 [debug] [Thread-5 (]: Timing info for model.airbnb.full_moon_reviews (execute): 10:51:08.864566 => 10:51:08.864572
+[0m10:51:08.865523 [debug] [Thread-2 (]: Finished running node model.airbnb.fct_reviews
+[0m10:51:08.866578 [debug] [Thread-5 (]: Finished running node model.airbnb.full_moon_reviews
+[0m10:51:08.866897 [debug] [Thread-4 (]: Began running node model.airbnb.dim_hosts_listings
+[0m10:51:08.867223 [debug] [Thread-3 (]: Began running node test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m10:51:08.867538 [debug] [Thread-6 (]: Began running node test.airbnb.dim_listings_minimum_nights
+[0m10:51:08.867839 [debug] [Thread-7 (]: Began running node test.airbnb.dim_listings_no_nul_cols
+[0m10:51:08.868157 [debug] [Thread-1 (]: Began running node test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329
+[0m10:51:08.868484 [debug] [Thread-2 (]: Began running node test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m10:51:08.868868 [debug] [Thread-5 (]: Began running node test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m10:51:08.869420 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly seed.airbnb.seed_full_moon_dates, now model.airbnb.dim_hosts_listings)
+[0m10:51:08.869956 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.airbnb.src_reviews, now test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af)
+[0m10:51:08.870489 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly snapshot.airbnb.scd_raw_listings, now test.airbnb.dim_listings_minimum_nights)
+[0m10:51:08.871019 [debug] [Thread-7 (]: Re-using an available connection from the pool (formerly model.airbnb.dim_hosts_cleansed, now test.airbnb.dim_listings_no_nul_cols)
+[0m10:51:08.871528 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.airbnb.dim_listings_cleansed, now test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329)
+[0m10:51:08.872043 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.airbnb.fct_reviews, now test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be)
+[0m10:51:08.872548 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.airbnb.full_moon_reviews, now test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9)
+[0m10:51:08.872863 [debug] [Thread-4 (]: Began compiling node model.airbnb.dim_hosts_listings
+[0m10:51:08.873171 [debug] [Thread-3 (]: Began compiling node test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m10:51:08.873492 [debug] [Thread-6 (]: Began compiling node test.airbnb.dim_listings_minimum_nights
+[0m10:51:08.873788 [debug] [Thread-7 (]: Began compiling node test.airbnb.dim_listings_no_nul_cols
+[0m10:51:08.874078 [debug] [Thread-1 (]: Began compiling node test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329
+[0m10:51:08.874368 [debug] [Thread-2 (]: Began compiling node test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m10:51:08.874650 [debug] [Thread-5 (]: Began compiling node test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m10:51:08.877375 [debug] [Thread-4 (]: Writing injected SQL for node "model.airbnb.dim_hosts_listings"
+[0m10:51:08.887966 [debug] [Thread-3 (]: Writing injected SQL for node "test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"
+[0m10:51:08.890166 [debug] [Thread-6 (]: Writing injected SQL for node "test.airbnb.dim_listings_minimum_nights"
+[0m10:51:08.900322 [debug] [Thread-7 (]: Using snowflake connection "test.airbnb.dim_listings_no_nul_cols"
+[0m10:51:08.904201 [debug] [Thread-1 (]: Writing injected SQL for node "test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329"
+[0m10:51:08.910959 [debug] [Thread-2 (]: Writing injected SQL for node "test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be"
+[0m10:51:08.914151 [debug] [Thread-5 (]: Writing injected SQL for node "test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9"
+[0m10:51:08.915674 [debug] [Thread-7 (]: On test.airbnb.dim_listings_no_nul_cols: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dim_listings_no_nul_cols"} */
+describe table AIRBNB.DEV.dim_listings_cleansed
+[0m10:51:08.916263 [debug] [Thread-4 (]: Timing info for model.airbnb.dim_hosts_listings (compile): 10:51:08.874858 => 10:51:08.916080
+[0m10:51:08.916789 [debug] [Thread-3 (]: Timing info for test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af (compile): 10:51:08.877642 => 10:51:08.916598
+[0m10:51:08.917162 [debug] [Thread-6 (]: Timing info for test.airbnb.dim_listings_minimum_nights (compile): 10:51:08.888281 => 10:51:08.917024
+[0m10:51:08.917683 [debug] [Thread-1 (]: Timing info for test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329 (compile): 10:51:08.900638 => 10:51:08.917541
+[0m10:51:08.918020 [debug] [Thread-2 (]: Timing info for test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be (compile): 10:51:08.904511 => 10:51:08.917896
+[0m10:51:08.918374 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m10:51:08.918761 [debug] [Thread-5 (]: Timing info for test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9 (compile): 10:51:08.911246 => 10:51:08.918614
+[0m10:51:08.919095 [debug] [Thread-4 (]: Began executing node model.airbnb.dim_hosts_listings
+[0m10:51:08.919457 [debug] [Thread-3 (]: Began executing node test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m10:51:08.919799 [debug] [Thread-6 (]: Began executing node test.airbnb.dim_listings_minimum_nights
+[0m10:51:08.920136 [debug] [Thread-1 (]: Began executing node test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329
+[0m10:51:08.920464 [debug] [Thread-2 (]: Began executing node test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m10:51:08.921316 [debug] [Thread-5 (]: Began executing node test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m10:51:08.922004 [debug] [Thread-4 (]: Timing info for model.airbnb.dim_hosts_listings (execute): 10:51:08.921856 => 10:51:08.921866
+[0m10:51:08.922455 [debug] [Thread-3 (]: Timing info for test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af (execute): 10:51:08.922280 => 10:51:08.922286
+[0m10:51:08.922871 [debug] [Thread-6 (]: Timing info for test.airbnb.dim_listings_minimum_nights (execute): 10:51:08.922709 => 10:51:08.922715
+[0m10:51:08.923268 [debug] [Thread-1 (]: Timing info for test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329 (execute): 10:51:08.923114 => 10:51:08.923121
+[0m10:51:08.923698 [debug] [Thread-2 (]: Timing info for test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be (execute): 10:51:08.923549 => 10:51:08.923554
+[0m10:51:08.924321 [debug] [Thread-5 (]: Timing info for test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9 (execute): 10:51:08.924170 => 10:51:08.924175
+[0m10:51:08.925484 [debug] [Thread-4 (]: Finished running node model.airbnb.dim_hosts_listings
+[0m10:51:08.926282 [debug] [Thread-3 (]: Finished running node test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m10:51:08.926991 [debug] [Thread-6 (]: Finished running node test.airbnb.dim_listings_minimum_nights
+[0m10:51:08.927711 [debug] [Thread-1 (]: Finished running node test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329
+[0m10:51:08.928389 [debug] [Thread-2 (]: Finished running node test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m10:51:08.929083 [debug] [Thread-5 (]: Finished running node test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m10:51:08.929474 [debug] [Thread-4 (]: Began running node test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m10:51:08.929949 [debug] [Thread-3 (]: Began running node test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m10:51:08.930365 [debug] [Thread-6 (]: Began running node test.airbnb.consistent_created_at
+[0m10:51:08.931189 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.airbnb.dim_hosts_listings, now test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad)
+[0m10:51:08.931742 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af, now test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e)
+[0m10:51:08.932255 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly test.airbnb.dim_listings_minimum_nights, now test.airbnb.consistent_created_at)
+[0m10:51:08.932590 [debug] [Thread-4 (]: Began compiling node test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m10:51:08.932896 [debug] [Thread-3 (]: Began compiling node test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m10:51:08.933192 [debug] [Thread-6 (]: Began compiling node test.airbnb.consistent_created_at
+[0m10:51:08.939822 [debug] [Thread-4 (]: Writing injected SQL for node "test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"
+[0m10:51:08.944826 [debug] [Thread-3 (]: Writing injected SQL for node "test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e"
+[0m10:51:08.948403 [debug] [Thread-6 (]: Writing injected SQL for node "test.airbnb.consistent_created_at"
+[0m10:51:08.949476 [debug] [Thread-4 (]: Timing info for test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad (compile): 10:51:08.933408 => 10:51:08.949304
+[0m10:51:08.949865 [debug] [Thread-3 (]: Timing info for test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e (compile): 10:51:08.940092 => 10:51:08.949698
+[0m10:51:08.950214 [debug] [Thread-4 (]: Began executing node test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m10:51:08.950571 [debug] [Thread-6 (]: Timing info for test.airbnb.consistent_created_at (compile): 10:51:08.945113 => 10:51:08.950426
+[0m10:51:08.950885 [debug] [Thread-3 (]: Began executing node test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m10:51:08.951262 [debug] [Thread-4 (]: Timing info for test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad (execute): 10:51:08.951105 => 10:51:08.951112
+[0m10:51:08.951570 [debug] [Thread-6 (]: Began executing node test.airbnb.consistent_created_at
+[0m10:51:08.951946 [debug] [Thread-3 (]: Timing info for test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e (execute): 10:51:08.951802 => 10:51:08.951808
+[0m10:51:08.952669 [debug] [Thread-4 (]: Finished running node test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m10:51:08.953046 [debug] [Thread-6 (]: Timing info for test.airbnb.consistent_created_at (execute): 10:51:08.952905 => 10:51:08.952910
+[0m10:51:08.953747 [debug] [Thread-3 (]: Finished running node test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m10:51:08.954518 [debug] [Thread-6 (]: Finished running node test.airbnb.consistent_created_at
+[0m10:51:10.608705 [debug] [Thread-7 (]: SQL status: SUCCESS 8 in 2.0 seconds
+[0m10:51:10.613492 [debug] [Thread-7 (]: Writing injected SQL for node "test.airbnb.dim_listings_no_nul_cols"
+[0m10:51:10.615405 [debug] [Thread-7 (]: Timing info for test.airbnb.dim_listings_no_nul_cols (compile): 10:51:08.890449 => 10:51:10.614996
+[0m10:51:10.615932 [debug] [Thread-7 (]: Began executing node test.airbnb.dim_listings_no_nul_cols
+[0m10:51:10.616336 [debug] [Thread-7 (]: Timing info for test.airbnb.dim_listings_no_nul_cols (execute): 10:51:10.616174 => 10:51:10.616200
+[0m10:51:10.616685 [debug] [Thread-7 (]: On test.airbnb.dim_listings_no_nul_cols: Close
+[0m10:51:11.163810 [debug] [Thread-7 (]: Finished running node test.airbnb.dim_listings_no_nul_cols
+[0m10:51:11.165761 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:51:11.166394 [debug] [MainThread]: Connection 'test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329' was properly closed.
+[0m10:51:11.166888 [debug] [MainThread]: Connection 'test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be' was properly closed.
+[0m10:51:11.167342 [debug] [MainThread]: Connection 'test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e' was properly closed.
+[0m10:51:11.167784 [debug] [MainThread]: Connection 'test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad' was properly closed.
+[0m10:51:11.168237 [debug] [MainThread]: Connection 'test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9' was properly closed.
+[0m10:51:11.168645 [debug] [MainThread]: Connection 'test.airbnb.consistent_created_at' was properly closed.
+[0m10:51:11.169049 [debug] [MainThread]: Connection 'test.airbnb.dim_listings_no_nul_cols' was properly closed.
+[0m10:51:11.172236 [debug] [MainThread]: Command end result
+[0m10:51:11.183911 [debug] [MainThread]: Command `dbt compile` succeeded at 10:51:11.183761 after 6.11 seconds
+[0m10:51:11.184436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c1d5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e653a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f231990>]}
+[0m10:51:11.184884 [debug] [MainThread]: Flushing usage events
+[0m10:51:25.783558 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103246080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10548e1a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10548e020>]}
+
+
+============================== 10:51:25.787306 | b7585cac-be9e-4d17-b13f-7f38f8e2c6f2 ==============================
+[0m10:51:25.787306 [info ] [MainThread]: Running with dbt=1.6.5
+[0m10:51:25.787814 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb', 'log_path': '/Users/phuccnguyen99/Project/Learn/airbnb-dbt/airbnb/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt test -s dim_listings_cleansed', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:51:26.522083 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b7585cac-be9e-4d17-b13f-7f38f8e2c6f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10548e050>]}
+[0m10:51:26.535459 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b7585cac-be9e-4d17-b13f-7f38f8e2c6f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b1b8d90>]}
+[0m10:51:26.536447 [info ] [MainThread]: Registered adapter: snowflake=1.6.4
+[0m10:51:26.552444 [debug] [MainThread]: checksum: aab365d456d99653250b9db50d1a1ebb1796991a326d59c2eea7a74da9519161, vars: {}, profile: , target: , version: 1.6.5
+[0m10:51:26.594843 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:51:26.595244 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:51:26.601225 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b7585cac-be9e-4d17-b13f-7f38f8e2c6f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b801720>]}
+[0m10:51:26.610424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b7585cac-be9e-4d17-b13f-7f38f8e2c6f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b7c4ca0>]}
+[0m10:51:26.610851 [info ] [MainThread]: Found 8 models, 1 seed, 2 snapshots, 9 tests, 3 sources, 0 exposures, 0 metrics, 377 macros, 0 groups, 0 semantic models
+[0m10:51:26.611170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b7585cac-be9e-4d17-b13f-7f38f8e2c6f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b7c4d30>]}
+[0m10:51:26.612551 [info ] [MainThread]: 
+[0m10:51:26.613135 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m10:51:26.614235 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_AIRBNB_DEV'
+[0m10:51:26.614975 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_AIRBNB_SNAPSHOT'
+[0m10:51:26.627176 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_DEV"
+[0m10:51:26.627760 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_airbnb_SNAPSHOT'
+[0m10:51:26.629735 [debug] [ThreadPool]: Using snowflake connection "list_AIRBNB_SNAPSHOT"
+[0m10:51:26.630038 [debug] [ThreadPool]: On list_AIRBNB_DEV: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB_DEV"} */
+show terse objects in AIRBNB.DEV limit 10000
+[0m10:51:26.631625 [debug] [ThreadPool]: Using snowflake connection "list_airbnb_SNAPSHOT"
+[0m10:51:26.632043 [debug] [ThreadPool]: On list_AIRBNB_SNAPSHOT: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_AIRBNB_SNAPSHOT"} */
+show terse objects in AIRBNB.SNAPSHOT limit 10000
+[0m10:51:26.632324 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:51:26.632602 [debug] [ThreadPool]: On list_airbnb_SNAPSHOT: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "connection_name": "list_airbnb_SNAPSHOT"} */
+show terse objects in airbnb.SNAPSHOT limit 10000
+[0m10:51:26.632853 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:51:26.635100 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:51:29.004553 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.0 seconds
+[0m10:51:29.006559 [debug] [ThreadPool]: On list_airbnb_SNAPSHOT: Close
+[0m10:51:29.023189 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.0 seconds
+[0m10:51:29.023982 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 2.0 seconds
+[0m10:51:29.025669 [debug] [ThreadPool]: On list_AIRBNB_SNAPSHOT: Close
+[0m10:51:29.027140 [debug] [ThreadPool]: On list_AIRBNB_DEV: Close
+[0m10:51:29.870889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b7585cac-be9e-4d17-b13f-7f38f8e2c6f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b85f400>]}
+[0m10:51:29.872154 [info ] [MainThread]: Concurrency: 7 threads (target='dev')
+[0m10:51:29.872706 [info ] [MainThread]: 
+[0m10:51:29.876857 [debug] [Thread-1 (]: Began running node test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m10:51:29.878361 [debug] [Thread-3 (]: Began running node test.airbnb.dim_listings_no_nul_cols
+[0m10:51:29.878924 [debug] [Thread-4 (]: Began running node test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329
+[0m10:51:29.879439 [info ] [Thread-1 (]: 1 of 8 START test accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room  [RUN]
+[0m10:51:29.877532 [debug] [Thread-2 (]: Began running node test.airbnb.dim_listings_minimum_nights
+[0m10:51:29.880451 [debug] [Thread-5 (]: Began running node test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m10:51:29.880959 [debug] [Thread-6 (]: Began running node test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m10:51:29.881481 [debug] [Thread-7 (]: Began running node test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m10:51:29.881943 [info ] [Thread-3 (]: 3 of 8 START test dim_listings_no_nul_cols ..................................... [RUN]
+[0m10:51:29.882495 [info ] [Thread-4 (]: 4 of 8 START test expect_positive_value_dim_listings_cleansed_minimum_nights ... [RUN]
+[0m10:51:29.883331 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_AIRBNB_DEV, now test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af)
+[0m10:51:29.883854 [info ] [Thread-2 (]: 2 of 8 START test dim_listings_minimum_nights .................................. [RUN]
+[0m10:51:29.884445 [info ] [Thread-5 (]: 5 of 8 START test not_null_dim_listings_cleansed_host_id ....................... [RUN]
+[0m10:51:29.885069 [info ] [Thread-6 (]: 6 of 8 START test not_null_dim_listings_cleansed_listing_id .................... [RUN]
+[0m10:51:29.885637 [info ] [Thread-7 (]: 7 of 8 START test relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_  [RUN]
+[0m10:51:29.886460 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_airbnb_SNAPSHOT, now test.airbnb.dim_listings_no_nul_cols)
+[0m10:51:29.887328 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329'
+[0m10:51:29.887821 [debug] [Thread-1 (]: Began compiling node test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m10:51:29.888546 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_AIRBNB_SNAPSHOT, now test.airbnb.dim_listings_minimum_nights)
+[0m10:51:29.889253 [debug] [Thread-5 (]: Acquiring new snowflake connection 'test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be'
+[0m10:51:29.889954 [debug] [Thread-6 (]: Acquiring new snowflake connection 'test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9'
+[0m10:51:29.890667 [debug] [Thread-7 (]: Acquiring new snowflake connection 'test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad'
+[0m10:51:29.891049 [debug] [Thread-3 (]: Began compiling node test.airbnb.dim_listings_no_nul_cols
+[0m10:51:29.891428 [debug] [Thread-4 (]: Began compiling node test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329
+[0m10:51:29.909730 [debug] [Thread-1 (]: Writing injected SQL for node "test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"
+[0m10:51:29.910261 [debug] [Thread-2 (]: Began compiling node test.airbnb.dim_listings_minimum_nights
+[0m10:51:29.910624 [debug] [Thread-5 (]: Began compiling node test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m10:51:29.910942 [debug] [Thread-6 (]: Began compiling node test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m10:51:29.911247 [debug] [Thread-7 (]: Began compiling node test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m10:51:29.920928 [debug] [Thread-3 (]: Using snowflake connection "test.airbnb.dim_listings_no_nul_cols"
+[0m10:51:29.924702 [debug] [Thread-4 (]: Writing injected SQL for node "test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329"
+[0m10:51:29.927018 [debug] [Thread-2 (]: Writing injected SQL for node "test.airbnb.dim_listings_minimum_nights"
+[0m10:51:29.933902 [debug] [Thread-1 (]: Timing info for test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af (compile): 10:51:29.891710 => 10:51:29.933638
+[0m10:51:29.935542 [debug] [Thread-5 (]: Writing injected SQL for node "test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be"
+[0m10:51:29.938866 [debug] [Thread-6 (]: Writing injected SQL for node "test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9"
+[0m10:51:29.945234 [debug] [Thread-7 (]: Writing injected SQL for node "test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"
+[0m10:51:29.945681 [debug] [Thread-3 (]: On test.airbnb.dim_listings_no_nul_cols: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dim_listings_no_nul_cols"} */
+describe table AIRBNB.DEV.dim_listings_cleansed
+[0m10:51:29.946319 [debug] [Thread-1 (]: Began executing node test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m10:51:29.946905 [debug] [Thread-4 (]: Timing info for test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329 (compile): 10:51:29.921282 => 10:51:29.946736
+[0m10:51:29.947262 [debug] [Thread-2 (]: Timing info for test.airbnb.dim_listings_minimum_nights (compile): 10:51:29.925080 => 10:51:29.947128
+[0m10:51:29.947733 [debug] [Thread-6 (]: Timing info for test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9 (compile): 10:51:29.935852 => 10:51:29.947579
+[0m10:51:29.948103 [debug] [Thread-5 (]: Timing info for test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be (compile): 10:51:29.927347 => 10:51:29.947964
+[0m10:51:29.948418 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m10:51:29.955099 [debug] [Thread-7 (]: Timing info for test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad (compile): 10:51:29.939169 => 10:51:29.954932
+[0m10:51:29.963660 [debug] [Thread-1 (]: Writing runtime sql for node "test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"
+[0m10:51:29.964046 [debug] [Thread-4 (]: Began executing node test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329
+[0m10:51:29.964373 [debug] [Thread-2 (]: Began executing node test.airbnb.dim_listings_minimum_nights
+[0m10:51:29.964685 [debug] [Thread-6 (]: Began executing node test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m10:51:29.964992 [debug] [Thread-5 (]: Began executing node test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m10:51:29.965873 [debug] [Thread-7 (]: Began executing node test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m10:51:29.968504 [debug] [Thread-4 (]: Writing runtime sql for node "test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329"
+[0m10:51:29.970739 [debug] [Thread-2 (]: Writing runtime sql for node "test.airbnb.dim_listings_minimum_nights"
+[0m10:51:29.971611 [debug] [Thread-1 (]: Using snowflake connection "test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"
+[0m10:51:29.973650 [debug] [Thread-6 (]: Writing runtime sql for node "test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9"
+[0m10:51:29.976798 [debug] [Thread-5 (]: Writing runtime sql for node "test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be"
+[0m10:51:29.979231 [debug] [Thread-7 (]: Writing runtime sql for node "test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"
+[0m10:51:29.980023 [debug] [Thread-1 (]: On test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        room_type as value_field,
+        count(*) as n_records
+
+    from AIRBNB.DEV.dim_listings_cleansed
+    group by room_type
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Entire home/apt','Private room','Shared room','Hotel room'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m10:51:29.980805 [debug] [Thread-4 (]: Using snowflake connection "test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329"
+[0m10:51:29.981366 [debug] [Thread-2 (]: Using snowflake connection "test.airbnb.dim_listings_minimum_nights"
+[0m10:51:29.982044 [debug] [Thread-6 (]: Using snowflake connection "test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9"
+[0m10:51:29.982691 [debug] [Thread-5 (]: Using snowflake connection "test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be"
+[0m10:51:29.983012 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:51:29.983767 [debug] [Thread-7 (]: Using snowflake connection "test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"
+[0m10:51:29.984106 [debug] [Thread-4 (]: On test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    SELECT *
+    FROM
+        AIRBNB.DEV.dim_listings_cleansed
+    WHERE 
+        minimum_nights < 1
+
+      
+    ) dbt_internal_test
+[0m10:51:29.984453 [debug] [Thread-2 (]: On test.airbnb.dim_listings_minimum_nights: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dim_listings_minimum_nights"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      SELECT
+ *
+FROM
+ AIRBNB.DEV.dim_listings_cleansed
+WHERE minimum_nights < 1
+      
+    ) dbt_internal_test
+[0m10:51:29.984790 [debug] [Thread-6 (]: On test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select listing_id
+from AIRBNB.DEV.dim_listings_cleansed
+where listing_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:51:29.985157 [debug] [Thread-5 (]: On test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select host_id
+from AIRBNB.DEV.dim_listings_cleansed
+where host_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:51:29.986041 [debug] [Thread-7 (]: On test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with child as (
+    select host_id as from_field
+    from AIRBNB.DEV.dim_listings_cleansed
+    where host_id is not null
+),
+
+parent as (
+    select host_id as to_field
+    from AIRBNB.DEV.dim_hosts_cleansed
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:51:29.986693 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:51:29.987049 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m10:51:29.987370 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m10:51:29.987678 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m10:51:29.988017 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m10:51:32.244579 [debug] [Thread-3 (]: SQL status: SUCCESS 8 in 2.0 seconds
+[0m10:51:32.246720 [debug] [Thread-3 (]: Writing injected SQL for node "test.airbnb.dim_listings_no_nul_cols"
+[0m10:51:32.247418 [debug] [Thread-3 (]: Timing info for test.airbnb.dim_listings_no_nul_cols (compile): 10:51:29.911479 => 10:51:32.247250
+[0m10:51:32.247763 [debug] [Thread-3 (]: Began executing node test.airbnb.dim_listings_no_nul_cols
+[0m10:51:32.250383 [debug] [Thread-3 (]: Writing runtime sql for node "test.airbnb.dim_listings_no_nul_cols"
+[0m10:51:32.251524 [debug] [Thread-3 (]: Using snowflake connection "test.airbnb.dim_listings_no_nul_cols"
+[0m10:51:32.251873 [debug] [Thread-3 (]: On test.airbnb.dim_listings_no_nul_cols: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.dim_listings_no_nul_cols"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+
+  SELECT *
+  FROM AIRBNB.DEV.dim_listings_cleansed
+  WHERE
+    LISTING_ID IS NULL OR
+    LISTING_NAME IS NULL OR
+    ROOM_TYPE IS NULL OR
+    MINIMUM_NIGHTS IS NULL OR
+    HOST_ID IS NULL OR
+    PRICE IS NULL OR
+    CREATED_AT IS NULL OR
+    UPDATED_AT IS NULL OR
+    
+    FALSE
+
+      
+    ) dbt_internal_test
+[0m10:51:32.288819 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m10:51:32.289585 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m10:51:32.295411 [debug] [Thread-4 (]: Timing info for test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329 (execute): 10:51:29.966493 => 10:51:32.295203
+[0m10:51:32.296855 [debug] [Thread-5 (]: Timing info for test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be (execute): 10:51:29.974126 => 10:51:32.296693
+[0m10:51:32.297610 [debug] [Thread-4 (]: On test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329: Close
+[0m10:51:32.298247 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m10:51:32.298648 [debug] [Thread-5 (]: On test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be: Close
+[0m10:51:32.301018 [debug] [Thread-2 (]: Timing info for test.airbnb.dim_listings_minimum_nights (execute): 10:51:29.968846 => 10:51:32.300844
+[0m10:51:32.302543 [debug] [Thread-2 (]: On test.airbnb.dim_listings_minimum_nights: Close
+[0m10:51:32.305094 [debug] [Thread-7 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m10:51:32.306852 [debug] [Thread-7 (]: Timing info for test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad (execute): 10:51:29.977291 => 10:51:32.306672
+[0m10:51:32.307629 [debug] [Thread-7 (]: On test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad: Close
+[0m10:51:32.319456 [debug] [Thread-6 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m10:51:32.321101 [debug] [Thread-6 (]: Timing info for test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9 (execute): 10:51:29.971911 => 10:51:32.320923
+[0m10:51:32.321461 [debug] [Thread-6 (]: On test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9: Close
+[0m10:51:32.639341 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m10:51:32.643531 [debug] [Thread-3 (]: Timing info for test.airbnb.dim_listings_no_nul_cols (execute): 10:51:32.247984 => 10:51:32.643140
+[0m10:51:32.644280 [debug] [Thread-3 (]: On test.airbnb.dim_listings_no_nul_cols: Close
+[0m10:51:32.946967 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m10:51:32.951966 [debug] [Thread-1 (]: Timing info for test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af (execute): 10:51:29.948658 => 10:51:32.951205
+[0m10:51:32.954542 [debug] [Thread-1 (]: On test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af: Close
+[0m10:51:32.998679 [info ] [Thread-7 (]: 7 of 8 PASS relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_  [[32mPASS[0m in 3.11s]
+[0m10:51:32.999975 [debug] [Thread-7 (]: Finished running node test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad
+[0m10:51:33.000693 [debug] [Thread-7 (]: Began running node test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m10:51:33.001538 [info ] [Thread-7 (]: 8 of 8 START test unique_dim_listings_cleansed_listing_id ...................... [RUN]
+[0m10:51:33.002712 [debug] [Thread-7 (]: Re-using an available connection from the pool (formerly test.airbnb.relationships_dim_listings_cleansed_host_id__host_id__ref_dim_hosts_cleansed_.b53b94b2ad, now test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e)
+[0m10:51:33.003352 [debug] [Thread-7 (]: Began compiling node test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m10:51:33.013236 [debug] [Thread-7 (]: Writing injected SQL for node "test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e"
+[0m10:51:33.015614 [debug] [Thread-7 (]: Timing info for test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e (compile): 10:51:33.003782 => 10:51:33.015304
+[0m10:51:33.016211 [debug] [Thread-7 (]: Began executing node test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m10:51:33.019541 [debug] [Thread-7 (]: Writing runtime sql for node "test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e"
+[0m10:51:33.020669 [info ] [Thread-4 (]: 4 of 8 PASS expect_positive_value_dim_listings_cleansed_minimum_nights ......... [[32mPASS[0m in 3.13s]
+[0m10:51:33.021545 [info ] [Thread-2 (]: 2 of 8 PASS dim_listings_minimum_nights ........................................ [[32mPASS[0m in 3.13s]
+[0m10:51:33.022677 [debug] [Thread-4 (]: Finished running node test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329
+[0m10:51:33.023353 [debug] [Thread-2 (]: Finished running node test.airbnb.dim_listings_minimum_nights
+[0m10:51:33.024424 [debug] [Thread-7 (]: Using snowflake connection "test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e"
+[0m10:51:33.025055 [debug] [Thread-7 (]: On test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e: /* {"app": "dbt", "dbt_version": "1.6.5", "profile_name": "airbnb", "target_name": "dev", "node_id": "test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    listing_id as unique_field,
+    count(*) as n_records
+
+from AIRBNB.DEV.dim_listings_cleansed
+where listing_id is not null
+group by listing_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m10:51:33.025495 [debug] [Thread-7 (]: Opening a new connection, currently in state closed
+[0m10:51:33.032326 [info ] [Thread-6 (]: 6 of 8 PASS not_null_dim_listings_cleansed_listing_id .......................... [[32mPASS[0m in 3.14s]
+[0m10:51:33.033195 [debug] [Thread-6 (]: Finished running node test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9
+[0m10:51:33.306618 [info ] [Thread-5 (]: 5 of 8 PASS not_null_dim_listings_cleansed_host_id ............................. [[32mPASS[0m in 3.42s]
+[0m10:51:33.307677 [debug] [Thread-5 (]: Finished running node test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be
+[0m10:51:33.353848 [info ] [Thread-3 (]: 3 of 8 PASS dim_listings_no_nul_cols ........................................... [[32mPASS[0m in 3.47s]
+[0m10:51:33.354519 [debug] [Thread-3 (]: Finished running node test.airbnb.dim_listings_no_nul_cols
+[0m10:51:33.760534 [info ] [Thread-1 (]: 1 of 8 PASS accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room  [[32mPASS[0m in 3.88s]
+[0m10:51:33.761646 [debug] [Thread-1 (]: Finished running node test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af
+[0m10:51:34.979232 [debug] [Thread-7 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m10:51:34.982496 [debug] [Thread-7 (]: Timing info for test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e (execute): 10:51:33.016580 => 10:51:34.982143
+[0m10:51:34.983204 [debug] [Thread-7 (]: On test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e: Close
+[0m10:51:35.804852 [info ] [Thread-7 (]: 8 of 8 PASS unique_dim_listings_cleansed_listing_id ............................ [[32mPASS[0m in 2.80s]
+[0m10:51:35.806347 [debug] [Thread-7 (]: Finished running node test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e
+[0m10:51:35.809024 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:51:35.809635 [debug] [MainThread]: Connection 'test.airbnb.accepted_values_dim_listings_cleansed_room_type__Entire_home_apt__Private_room__Shared_room__Hotel_room.a95127e3af' was properly closed.
+[0m10:51:35.810122 [debug] [MainThread]: Connection 'test.airbnb.dim_listings_minimum_nights' was properly closed.
+[0m10:51:35.810552 [debug] [MainThread]: Connection 'test.airbnb.dim_listings_no_nul_cols' was properly closed.
+[0m10:51:35.810998 [debug] [MainThread]: Connection 'test.airbnb.expect_positive_value_dim_listings_cleansed_minimum_nights.13b3b98329' was properly closed.
+[0m10:51:35.811414 [debug] [MainThread]: Connection 'test.airbnb.not_null_dim_listings_cleansed_host_id.084e4105be' was properly closed.
+[0m10:51:35.811823 [debug] [MainThread]: Connection 'test.airbnb.not_null_dim_listings_cleansed_listing_id.2da437bec9' was properly closed.
+[0m10:51:35.812238 [debug] [MainThread]: Connection 'test.airbnb.unique_dim_listings_cleansed_listing_id.930e4e859e' was properly closed.
+[0m10:51:35.812733 [info ] [MainThread]: 
+[0m10:51:35.813247 [info ] [MainThread]: Finished running 8 tests in 0 hours 0 minutes and 9.20 seconds (9.20s).
+[0m10:51:35.815384 [debug] [MainThread]: Command end result
+[0m10:51:35.828713 [info ] [MainThread]: 
+[0m10:51:35.829259 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:51:35.829624 [info ] [MainThread]: 
+[0m10:51:35.829991 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 TOTAL=8
+[0m10:51:35.830647 [debug] [MainThread]: Command `dbt test` succeeded at 10:51:35.830545 after 10.06 seconds
+[0m10:51:35.831101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103246080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b833d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c1e03d0>]}
+[0m10:51:35.831549 [debug] [MainThread]: Flushing usage events

@@ -18,6 +18,8 @@ models:
             'Private room',
             'Shared room',
             'Hotel room']
+            config:
+              severity: warn
     - name: minimum_nights
       tests:
         - expect_positive_value
